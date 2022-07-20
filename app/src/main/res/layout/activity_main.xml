@@ -7,11 +7,11 @@
 
         <variable
             name="vm"
-            type="MainViewModel" />
+            type="com.iuturakulov.uzbarchitecture_ar.ui.viewmodel.MainViewModel" />
 
         <variable
             name="adapter"
-            type="ArchitectureAdapter" />
+            type="com.iuturakulov.uzbarchitecture_ar.ui.adapter.ArchitectureAdapter" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -45,7 +45,7 @@
             android:scrollbarThumbVertical="@drawable/scrollbar"
             android:scrollbars="vertical"
             app:adapter="@{adapter}"
-            app:adapterPokemonList="@{vm.pokemonList}"
+            app:adapterPokemonList="@{vm.architectureList}"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -59,10 +59,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/placeholder_empty_pokemon"
+            android:text="@string/empty_architecture_placeholder"
             android:textColor="@color/white"
             android:textSize="@dimen/_18ssp"
-            app:gone="@{!vm.pokemonList.empty}"
+            app:gone="@{!vm.architectureList.empty}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -73,25 +73,25 @@
             android:id="@+id/progressbar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:indeterminateTint="@color/colorPrimary"
+            android:indeterminateTint="@color/md_orange_100"
             app:gone="@{!vm.loading}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_18sdp"
-            android:contentDescription="@string/app_name"
-            android:src="@drawable/"
-            app:backgroundTint="@color/colorPrimary"
-            app:fabSize="normal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:tint="@color/white" />
+        <!--  <com.google.android.material.floatingactionbutton.FloatingActionButton
+              android:id="@+id/floating"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_margin="@dimen/_18sdp"
+              android:contentDescription="@string/app_name"
+              android:src="@drawable/"
+              app:backgroundTint="@color/colorPrimary"
+              app:fabSize="normal"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:tint="@color/white" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

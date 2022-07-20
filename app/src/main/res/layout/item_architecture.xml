@@ -7,7 +7,7 @@
 
         <variable
             name="archcomponent"
-            type="Archcomponent" />
+            type="com.iuturakulov.uzbarchitecture_ar.model.Architecture" />
 
     </data>
 
@@ -42,14 +42,14 @@
                 app:paletteImage="@{archcomponent.imageUrl}" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/name"
+                android:id="@+id/architecture_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:elevation="@dimen/_4sdp"
                 android:gravity="center"
                 android:maxLines="1"
                 android:padding="@dimen/_12sdp"
-                android:text="@{@string/archcomponent_name(archcomponent.name, archcomponent.hits)}"
+                android:text="@{@string/archcomponent_name(archcomponent.name)}"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_16ssp"
                 android:textStyle="bold"

@@ -14,6 +14,16 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="Theme.UzbArchitectureAR.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/md_orange_100</item>
+        <item name="colorPrimaryVariant">@color/md_yellow_100</item>
+        <item name="colorOnPrimary">@color/md_yellow_200</item>
+        <item name="colorOnBackground">@color/white_87</item>
+        <item name="android:textColorPrimary">@color/black_70</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    </style>
+
 
     <style name="TextStyle" parent="@android:style/Widget.TextView">
         <item name="android:textColor">@android:color/white</item>
