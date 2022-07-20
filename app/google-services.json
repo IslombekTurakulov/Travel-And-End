@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "513049324311",
+    "project_id": "uzbarchitecturear",
+    "storage_bucket": "uzbarchitecturear.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:513049324311:android:cf38fd71b780c59613a552",
+        "android_client_info": {
+          "package_name": "com.iuturakulov.uzbarchitecture_ar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "513049324311-sr3r0249n3r28vro7fh2u5qluvgq0cr2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iuturakulov.uzbarchitecture_ar",
+            "certificate_hash": "29f4bb42534ce327627ef1e025434a1a07a6f3f4"
+          }
+        },
+        {
+          "client_id": "513049324311-eheq4mmb4bpeon8u6roi4sv5375caqe4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGgQuFicJ-2UshzynRUE8eyGCjbKB2ELI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "513049324311-eheq4mmb4bpeon8u6roi4sv5375caqe4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
