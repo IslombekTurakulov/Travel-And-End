@@ -54,7 +54,6 @@ class DetailActivity : BindingActivity<ActivityDetailBinding>(R.layout.activity_
                 if (arFrame.camera?.trackingState != TrackingState.TRACKING) {
                     return@addOnUpdateListener
                 }
-
                 // initialize the global anchor with default rendering models.
                 arSceneView.session.whatIfNotNull { session ->
                     initializeModels(this, session)
@@ -67,10 +66,10 @@ class DetailActivity : BindingActivity<ActivityDetailBinding>(R.layout.activity_
         if (session.allAnchors.isEmpty()) {
             val pose = Pose(floatArrayOf(0f, 0f, -1f), floatArrayOf(0f, 0f, 0f, 1f))
             session.createAnchor(pose).apply {
-                val architecture = ArchitectureModels.getPokemonByName(this@DetailActivity.architecture!!.name)
+                val architecture = ArchitectureModels.getPokemonByName(this@DetailActivity.architecture.name)
                     .copy(localPosition = DEFAULT_POSITION_DETAILS_ARCHITECTURE)
-                ModelRenderer.renderObject(this@DetailActivity, architecture) { renderable ->
-                    ModelRenderer.addModelOnScene(arFragment, this, renderable, architecture)
+                ModelRenderer.renderObject(this@DetailActivity, architecture) { renewable ->
+                    ModelRenderer.addModelOnScene(arFragment, this, renewable, architecture)
                 }
             }
         }

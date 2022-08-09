@@ -1,10 +1,10 @@
 package com.iuturakulov.uzbarchitecture_ar.ui.repository
 
 import androidx.annotation.WorkerThread
-import com.iuturakulov.uzbarchitecture_ar.extensions.ErrorResponseMapper
 import com.iuturakulov.uzbarchitecture_ar.model.ArchitectureInfo
 import com.iuturakulov.uzbarchitecture_ar.network.ArchitectureClient
 import com.iuturakulov.uzbarchitecture_ar.storage.dao.ArchitectureInfoDao
+import com.skydoves.sandwich.message
 import com.skydoves.sandwich.onError
 import com.skydoves.sandwich.onException
 import com.skydoves.sandwich.suspendOnSuccess
@@ -31,11 +31,11 @@ class DetailRepository @Inject constructor(
             response.suspendOnSuccess {
                 architectureInfoDao.insertArchitectureInfo(data)
                 emit(data)
+            }.onError {
+                onError("[Code: ${statusCode.code}]: ${message()}")
+            }.onException {
+                onError(message)
             }
-                .onError(ErrorResponseMapper) {
-                    onError("[Code: $code]: $message")
-                }
-                .onException { onError(message) }
         } else {
             emit(architectureInfo)
         }

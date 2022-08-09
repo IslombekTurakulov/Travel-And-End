@@ -3,7 +3,6 @@ package com.iuturakulov.uzbarchitecture_ar.di
 import android.app.Application
 import androidx.room.Room
 import com.iuturakulov.uzbarchitecture_ar.storage.AppDatabase
-import com.iuturakulov.uzbarchitecture_ar.storage.TypeResponseConverter
 import com.iuturakulov.uzbarchitecture_ar.storage.dao.ArchitectureDao
 import com.iuturakulov.uzbarchitecture_ar.storage.dao.ArchitectureInfoDao
 import com.squareup.moshi.Moshi
@@ -27,30 +26,22 @@ object PersistenceModule {
     @Singleton
     fun provideAppDatabase(
         application: Application,
-        typeResponseConverter: TypeResponseConverter
     ): AppDatabase {
         return Room
             .databaseBuilder(application, AppDatabase::class.java, "UzbArchitectureAR.db")
             .fallbackToDestructiveMigration()
-            .addTypeConverter(typeResponseConverter)
             .build()
     }
 
     @Provides
     @Singleton
-    fun providePokemonDao(appDatabase: AppDatabase): ArchitectureDao {
+    fun provideArchDao(appDatabase: AppDatabase): ArchitectureDao {
         return appDatabase.architectureDao()
     }
 
     @Provides
     @Singleton
-    fun providePokemonInfoDao(appDatabase: AppDatabase): ArchitectureInfoDao {
+    fun provideArchInfoDao(appDatabase: AppDatabase): ArchitectureInfoDao {
         return appDatabase.architectureInfoDao()
-    }
-
-    @Provides
-    @Singleton
-    fun provideTypeResponseConverter(moshi: Moshi): TypeResponseConverter {
-        return TypeResponseConverter(moshi)
     }
 }

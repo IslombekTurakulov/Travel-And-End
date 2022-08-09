@@ -34,17 +34,17 @@ object RepositoryModule {
     @Provides
     @ViewModelScoped
     fun provideMainRepository(
-        architectureDao: ArchitectureDao
+        archDao: ArchitectureDao
     ): MainRepository {
-        return MainRepository(architectureDao)
+        return MainRepository(archDao)
     }
 
     @Provides
     @ViewModelScoped
     fun provideDetailRepository(
-        architectureClient: ArchitectureClient,
-        pokemonInfoDao: ArchitectureInfoDao
+        archClient: ArchitectureClient,
+        archInfoDao: ArchitectureInfoDao
     ): DetailRepository {
-        return DetailRepository(architectureClient, pokemonInfoDao)
+        return DetailRepository(archClient, archInfoDao)
     }
 }

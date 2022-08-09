@@ -18,14 +18,14 @@ class DetailViewModel @AssistedInject constructor(
     @Assisted private val archName: String
 ) : BindingViewModel() {
 
-  private val pokemonInfoFlow = detailRepository.fetchPokemonInfo(
+  private val archInfoFlow = detailRepository.fetchPokemonInfo(
     name = archName,
     onComplete = { isLoading = false },
     onError = { errorMessage = it }
   )
 
   @get:Bindable
-  val architectureInfo: ArchitectureInfo? by pokemonInfoFlow.asBindingProperty(viewModelScope, null)
+  val architectureInfo: ArchitectureInfo? by archInfoFlow.asBindingProperty(viewModelScope, null)
 
   @get:Bindable
   var errorMessage: String? by bindingProperty(null)

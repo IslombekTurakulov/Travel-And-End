@@ -16,12 +16,12 @@ ext.versions = [
         sceneFormVersion     : '1.17.1',
 
         // support library
-        materialVersion      : '1.4.0',
+        materialVersion      : '1.6.1',
 
         // architecture components
-        fragmentVersion      : '1.2.5',
-        lifecycleVersion     : '2.4.0',
-        roomVersion          : '2.4.0',
+        fragmentVersion      : '1.5.1',
+        lifecycleVersion     : '2.5.1',
+        roomVersion          : '2.4.3',
         archCompomentVersion : '2.1.0',
 
         // binding
@@ -36,20 +36,19 @@ ext.versions = [
 
         // network
         retrofitVersion      : '2.9.0',
-        sandwichVersion      : '1.2.2',
+        sandwichVersion      : '1.2.6',
         okhttpVersion        : '4.7.2',
 
         // moshi
         moshiVersion         : '1.12.0',
 
         // coroutines
-        coroutinesVersion    : '1.6.0',
+        coroutinesVersion    : '1.6.1',
 
         // glide
-        glideVersion         : '4.12.0',
+        glideVersion         : '4.13.0',
         glidePaletteVersion  : '2.1.2',
-
-        // debugging
+        // Log
         timberVersion        : '5.0.1',
 
         // unit test
