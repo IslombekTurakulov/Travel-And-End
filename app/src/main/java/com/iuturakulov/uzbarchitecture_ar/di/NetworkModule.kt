@@ -18,34 +18,34 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
 
-  @Provides
-  @Singleton
-  fun provideOkHttpClient(): OkHttpClient {
-    return OkHttpClient.Builder()
-      .addInterceptor(HttpRequestInterceptor())
-      .build()
-  }
+    @Provides
+    @Singleton
+    fun provideOkHttpClient(): OkHttpClient {
+        return OkHttpClient.Builder()
+            .addInterceptor(HttpRequestInterceptor())
+            .build()
+    }
 
-  @Provides
-  @Singleton
-  fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
-    return Retrofit.Builder()
-      .client(okHttpClient)
-      .baseUrl(Constants.BASE_URL)
-      .addConverterFactory(MoshiConverterFactory.create())
-      .addCallAdapterFactory(CoroutinesResponseCallAdapterFactory.create())
-      .build()
-  }
+    @Provides
+    @Singleton
+    fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
+        return Retrofit.Builder()
+            .client(okHttpClient)
+            .baseUrl(Constants.BASE_URL)
+            .addConverterFactory(MoshiConverterFactory.create())
+            .addCallAdapterFactory(CoroutinesResponseCallAdapterFactory.create())
+            .build()
+    }
 
-  @Provides
-  @Singleton
+    @Provides
+    @Singleton
     fun provideArchitectureService(retrofit: Retrofit): ArchitectureService {
-    return retrofit.create(ArchitectureService::class.java)
-  }
+        return retrofit.create(ArchitectureService::class.java)
+    }
 
-  @Provides
-  @Singleton
-  fun provideArchitectureClient(architectureService: ArchitectureService): ArchitectureClient {
-    return ArchitectureClient(architectureService)
-  }
+    @Provides
+    @Singleton
+    fun provideArchitectureClient(architectureService: ArchitectureService): ArchitectureClient {
+        return ArchitectureClient(architectureService)
+    }
 }

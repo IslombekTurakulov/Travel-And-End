@@ -4,7 +4,6 @@ plugins {
     id 'kotlin-parcelize'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
-    id 'com.google.gms.google-services'
 }
 
 apply from: "$rootDir/dependencies.gradle"
@@ -38,36 +37,31 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
     buildFeatures {
         dataBinding true
     }
+
     lintOptions {
         abortOnError false
     }
+
     testOptions {
         unitTests {
             includeAndroidResources = true
             returnDefaultValues = true
         }
     }
-    packagingOptions {
-        exclude 'META-INF/DEPENDENCIES'
-        exclude 'META-INF/LICENSE'
-        exclude 'META-INF/LICENSE.txt'
-        exclude 'META-INF/license.txt'
-        exclude 'META-INF/NOTICE'
-        exclude 'META-INF/NOTICE.txt'
-        exclude 'META-INF/notice.txt'
-        exclude 'META-INF/ASL2.0'
-        exclude("META-INF/*.kotlin_module")
-    }
+
     tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
         kotlinOptions.freeCompilerArgs += ["-Xopt-in=kotlin.time.ExperimentalTime"]
         kotlinOptions.freeCompilerArgs += ["-Xopt-in=kotlinx.coroutines.ExperimentalCoroutinesApi"]
@@ -75,8 +69,8 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.core:core-ktx:1.8.0'
-    implementation 'androidx.appcompat:appcompat:1.5.0'
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
     testImplementation 'junit:junit:4.13.2'
@@ -85,11 +79,11 @@ dependencies {
     implementation "androidx.fragment:fragment-ktx:$versions.fragmentVersion"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycleVersion"
     implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$versions.lifecycleVersion"
+
     // Room
     implementation "androidx.room:room-runtime:$versions.roomVersion"
     implementation "androidx.room:room-ktx:$versions.roomVersion"
     kapt "androidx.room:room-compiler:$versions.roomVersion"
-    testImplementation "androidx.arch.core:core-testing:$versions.archCompomentVersion"
 
     // Scalable sp
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
@@ -115,12 +109,12 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:$versions.okhttpVersion"
     testImplementation "com.squareup.okhttp3:mockwebserver:$versions.okhttpVersion"
 
+    // Log
+    implementation "com.jakewharton.timber:timber:$versions.timberVersion"
+
     // Moshi
     implementation "com.squareup.moshi:moshi-kotlin:$versions.moshiVersion"
     kapt "com.squareup.moshi:moshi-kotlin-codegen:$versions.moshiVersion"
-
-    // Log
-    implementation "com.jakewharton.timber:timber:$versions.timberVersion"
 
     // Coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutinesVersion"
@@ -142,6 +136,7 @@ dependencies {
 
     // WhatIf
     implementation "com.github.skydoves:whatif:$versions.whatIfVersion"
+
     // Bundler
     implementation "com.github.skydoves:bundler:$versions.bundlerVersion"
 }

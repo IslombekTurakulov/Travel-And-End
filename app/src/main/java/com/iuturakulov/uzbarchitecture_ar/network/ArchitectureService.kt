@@ -7,6 +7,9 @@ import retrofit2.http.Path
 
 interface ArchitectureService {
 
-  @GET("archcomp/{name}")
-  suspend fun fetchArchitectureInfo(@Path("name") name: String): ApiResponse<ArchitectureInfo>
+    @GET("/architectures_{name}.json?token={token}")
+    suspend fun fetchArchitectureInfo(
+        @Path("name") name: String,
+        @Path("token") token: String
+    ): ApiResponse<ArchitectureInfo>
 }

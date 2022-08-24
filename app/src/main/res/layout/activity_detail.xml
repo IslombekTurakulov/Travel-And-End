@@ -25,15 +25,15 @@
             android:layout_marginBottom="32dp"
             android:descendantFocusability="blocksDescendants">
 
-            <fragment
-                android:id="@+id/arFragment"
-                android:name="com.google.ar.sceneform.ux.ArFragment"
+            <ImageView
+                android:id="@+id/imageArch"
                 android:layout_width="match_parent"
                 android:layout_height="340dp"
+                android:contentDescription="@string/image_information"
+                android:src="@drawable/ic_launcher_foreground"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="FragmentTagUsage" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/architecture_name"
@@ -50,7 +50,7 @@
                 android:translationZ="100dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/arFragment"
+                app:layout_constraintTop_toBottomOf="@id/imageArch"
                 app:toast="@{vm.errorMessage}"
                 tools:text="Registan" />
 

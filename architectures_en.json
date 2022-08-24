@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "name": "Ulugh Beg Observatory",
+    "description": "The Ulugh Beg Observatory is an observatory in Samarkand, Uzbekistan. Built in the 1420s by the Timurid astronomer Ulugh Beg. Islamic astronomers who worked at the observatory include Al-Kashi, Ali Qushji, and Ulugh Beg himself. The observatory was destroyed in 1449 and rediscovered in 1908.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Samarkand_observatoire_ulugh_beg.jpg/450px-Samarkand_observatoire_ulugh_beg.jpg",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Ulugh_Beg_Observatory",
+    "ar_url": "https://uzbarchitecture-ar.glitch.me/index.html"
+  },
+  {
+    "id": "2",
+    "name": "The monument to Amir Timur",
+    "description": "The monument to Emir Timur is a bronze equestrian monument to Tamerlane, a statesman and commander, one of the founders of the Uzbek statehood.\n\nThe monument, the work of sculptors Ilham Jabbarov and Kamill Jabbarov, was opened on August 31, 1993 in the center of Tashkent, in the central square of the city, renamed in honor of Amir Temur. The opening of the monument, attended by President Islam Karimov, was timed to coincide with the celebration of the second anniversary of the country's independence.\n\nThe sculpture depicts Tamerlane sitting astride a horse in full marching attire, wearing a helmet made in the form of a royal crown, with a saber in a scabbard on his belt, which was a distinctive feature of the military class of that era and with a shield strapped to the saddle. The commander holds the reins of the horse with his left hand, the right hand is raised up. The name of the ruler \"AMIR TEMUR\" and his motto \"power in justice\" are engraved on the pedestal of the monument in four languages — Uzbek, Russian, English and Arabic.",
+    "image_url": "https://www.technopat.net/sosyal/eklenti/timurlenk-jpg.106682/",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Timur",
+    "ar_url": "https://uzbarchitecture-ar.glitch.me/amirtemur.html"
+  },
+  {
+    "id": "3",
+    "name": "Tomb of Amir Temur",
+    "description": "The Gūr-i Amīr or Guri Amir (Uzbek: Amir Temur maqbarasi, Go'ri Amir, Persian: گورِ امیر) is a mausoleum of the Turco-Mongol conqueror Timur (also known as Tamerlane) in Samarkand, Uzbekistan. It occupies an important place in the history of Central Asian Architecture as the precursor for and had influence on later Great Mughal architecture tombs, including Gardens of Babur in Kabul, Humayun's Tomb in Delhi and the Taj Mahal in Agra, built by Timur's Indian descendants, Turco-Mongols that followed Indian culture with Central Asian influences, Mughals established the ruling Mughal dynasty of the Indian subcontinent. The mausoleum has been heavily restored.",
+    "image_url": "http://dkm.gov.uz/uploads/2020/05/oralapzoapdrapyv-800x600.jpg",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Gur-e-Amir",
+    "ar_url": "https://uzbarchitecture-ar.glitch.me/amirtemur.html"
+  }
+]

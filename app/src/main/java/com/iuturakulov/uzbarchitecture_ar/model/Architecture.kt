@@ -11,4 +11,9 @@ data class Architecture(
     @PrimaryKey val id: Int,
     val name: String,
     val url: String
-) : Parcelable
+) : Parcelable {
+
+    fun getImageUrl(): String {
+        return "/$id.png"
+    }
+}

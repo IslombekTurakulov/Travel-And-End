@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "name": "Обсерватория Улугбека",
+    "description": "Обсерватория Улугбека (узб. Ulug‘bek rasadxonasi) — одна из наиболее значительных обсерваторий средневековья, построенная Улугбеком на холме Кухак в окрестностях Самарканда в 1424—1428 годах.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Samarkand_observatoire_ulugh_beg.jpg/450px-Samarkand_observatoire_ulugh_beg.jpg",
+    "wikipedia_url": "https://ru.wikipedia.org/wiki/Обсерватория_Улугбека",
+    "ar_url": "https://uzbarchitecture-ar.glitch.me/index.html"
+  },
+  {
+    "id": "2",
+    "name": "Монумент Амира Тимура",
+    "description": "Тамерла́н, Тиму́р (чагат., تیمور [Timür, Timōr]; 9 апреля 1336, Кеш, совр. Узбекистан — 19 февраля 1405, Отрар, совр. Казахстан) — среднеазиатский тюрко-монгольский военачальник и завоеватель, сыгравший существенную роль в истории Средней, Южной и Западной Азии, а также Кавказа, Поволжья и Руси.\n\nОснователь империи Тимуридов (около 1370 года) со столицей в Самарканде.",
+    "image_url": "https://www.technopat.net/sosyal/eklenti/timurlenk-jpg.106682/",
+    "wikipedia_url": "https://ru.wikipedia.org/wiki/Тамерлан",
+    "ar_url": "https://uzbarchitecture-ar.glitch.me/amirtemur.html"
+  },
+  {
+    "id": "3",
+    "name": "Гробница Амира Тимура",
+    "description": "Гур-Эми́р(узб. Go'ri Amir от перс. گورِ امیر «Гробница эмира») — мавзолей Тамерлана (Амира Тимура), его наставника Мир Сайид Барака, и некоторых членов семьи Тимура — (Тимуридов) в Самарканде (Узбекистан). Также интерпретируется как \"Гури Мир\" — могила миров, имеется в виду Мир Саид Барака.\n\nВ 2014 году решением Межпарламентской Ассамблеи стран-участниц СНГ внесён в список достопримечательностей «Жемчужин Содружества».",
+    "image_url": "http://dkm.gov.uz/uploads/2020/05/oralapzoapdrapyv-800x600.jpg",
+    "wikipedia_url": "https://ru.wikipedia.org/wiki/Гур-Эмир",
+    "ar_url": "https://uzbarchitecture-ar.glitch.me/amirtemur.html"
+  }
+]

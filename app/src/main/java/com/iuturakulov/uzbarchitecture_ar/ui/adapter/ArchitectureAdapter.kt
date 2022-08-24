@@ -32,9 +32,9 @@ class ArchitectureAdapter : RecyclerView.Adapter<ArchitectureAdapter.Architectur
         }
     }
 
-    fun setArchitectDataList(pokemonList: List<Architecture>) {
+    fun setArchitectDataList(archList: List<Architecture>) {
         items.clear()
-        items.addAll(pokemonList)
+        items.addAll(archList)
         notifyDataSetChanged()
     }
 

@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.Flow
 interface ArchitectureDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertArchitecture(pokemon: Architecture)
+    suspend fun insertArchitecture(architecture: Architecture)
 
     @Query("SELECT * FROM Architecture WHERE id = :id_")
     suspend fun getArchitecture(id_: Int): Architecture?

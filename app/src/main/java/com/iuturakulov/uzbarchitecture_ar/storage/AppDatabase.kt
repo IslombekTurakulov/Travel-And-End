@@ -8,11 +8,14 @@ import com.iuturakulov.uzbarchitecture_ar.model.ArchitectureInfo
 import com.iuturakulov.uzbarchitecture_ar.storage.dao.ArchitectureDao
 import com.iuturakulov.uzbarchitecture_ar.storage.dao.ArchitectureInfoDao
 
-@Database(entities = [Architecture::class, ArchitectureInfo::class], version = 1, exportSchema = true)
-@TypeConverters(value = [TypeResponseConverter::class])
+@Database(
+    entities = [Architecture::class, ArchitectureInfo::class],
+    version = 1,
+    exportSchema = true
+)
 abstract class AppDatabase : RoomDatabase() {
 
-  abstract fun architectureDao(): ArchitectureDao
+    abstract fun architectureDao(): ArchitectureDao
 
-  abstract fun architectureInfoDao(): ArchitectureInfoDao
+    abstract fun architectureInfoDao(): ArchitectureInfoDao
 }

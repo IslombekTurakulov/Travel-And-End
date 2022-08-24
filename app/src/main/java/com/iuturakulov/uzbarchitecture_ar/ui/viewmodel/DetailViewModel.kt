@@ -18,41 +18,41 @@ class DetailViewModel @AssistedInject constructor(
     @Assisted private val archName: String
 ) : BindingViewModel() {
 
-  private val archInfoFlow = detailRepository.fetchPokemonInfo(
-    name = archName,
-    onComplete = { isLoading = false },
-    onError = { errorMessage = it }
-  )
+    private val archInfoFlow = detailRepository.fetchPokemonInfo(
+        name = archName,
+        onComplete = { isLoading = false },
+        onError = { errorMessage = it }
+    )
 
-  @get:Bindable
-  val architectureInfo: ArchitectureInfo? by archInfoFlow.asBindingProperty(viewModelScope, null)
+    @get:Bindable
+    val architectureInfo: ArchitectureInfo? by archInfoFlow.asBindingProperty(viewModelScope, null)
 
-  @get:Bindable
-  var errorMessage: String? by bindingProperty(null)
-    private set
+    @get:Bindable
+    var errorMessage: String? by bindingProperty(null)
+        private set
 
-  @get:Bindable
-  var isLoading: Boolean by bindingProperty(true)
-    private set
+    @get:Bindable
+    var isLoading: Boolean by bindingProperty(true)
+        private set
 
-  init {
-    Timber.d("init DetailViewModel")
-  }
-
-  @dagger.assisted.AssistedFactory
-  interface AssistedFactory {
-    fun create(archName: String): DetailViewModel
-  }
-
-  companion object {
-    fun provideFactory(
-      assistedFactory: AssistedFactory,
-      archName: String
-    ): ViewModelProvider.Factory = object : ViewModelProvider.Factory {
-      @Suppress("UNCHECKED_CAST")
-      override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        return assistedFactory.create(archName) as T
-      }
+    init {
+        Timber.d("init DetailViewModel")
     }
-  }
+
+    @dagger.assisted.AssistedFactory
+    interface AssistedFactory {
+        fun create(archName: String): DetailViewModel
+    }
+
+    companion object {
+        fun provideFactory(
+            assistedFactory: AssistedFactory,
+            archName: String
+        ): ViewModelProvider.Factory = object : ViewModelProvider.Factory {
+            @Suppress("UNCHECKED_CAST")
+            override fun <T : ViewModel> create(modelClass: Class<T>): T {
+                return assistedFactory.create(archName) as T
+            }
+        }
+    }
 }

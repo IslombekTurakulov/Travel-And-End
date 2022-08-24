@@ -9,7 +9,7 @@ ext.versions = [
         spotlessGradle       : '6.1.0',
 
         // kotlin
-        kotlin               : '1.5.32',
+        kotlin               : '1.7.10',
 
         // support library
         materialVersion      : '1.6.1',

@@ -30,7 +30,10 @@ class MainViewModel @Inject constructor(
     )
 
     @get:Bindable
-    val architectureList: List<Architecture>? by architectureListFlow.asBindingProperty(viewModelScope, null)
+    val architectureList: List<Architecture>? by architectureListFlow.asBindingProperty(
+        viewModelScope,
+        null
+    )
 
     init {
         Timber.d("init MainViewModel")
