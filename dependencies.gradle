@@ -11,10 +11,6 @@ ext.versions = [
         // kotlin
         kotlin               : '1.5.32',
 
-        // ar-core
-        arCoreVersion        : '1.29.0',
-        sceneFormVersion     : '1.17.1',
-
         // support library
         materialVersion      : '1.6.1',
 
