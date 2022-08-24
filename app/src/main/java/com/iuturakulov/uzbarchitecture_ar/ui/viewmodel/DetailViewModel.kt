@@ -15,11 +15,13 @@ import timber.log.Timber
 
 class DetailViewModel @AssistedInject constructor(
     detailRepository: DetailRepository,
-    @Assisted private val archName: String
+    @Assisted private val archName: String,
+    @Assisted private val token: String
 ) : BindingViewModel() {
 
-    private val archInfoFlow = detailRepository.fetchPokemonInfo(
+    private val archInfoFlow = detailRepository.fetchArchInfo(
         name = archName,
+        token = token,
         onComplete = { isLoading = false },
         onError = { errorMessage = it }
     )

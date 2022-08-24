@@ -1,5 +1,7 @@
 package com.iuturakulov.uzbarchitecture_ar.ui.activities
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
@@ -12,6 +14,7 @@ import com.skydoves.bindables.BindingActivity
 import com.skydoves.bundler.bundleNonNull
 import com.skydoves.bundler.intentOf
 import javax.inject.Inject
+
 
 class DetailActivity : BindingActivity<ActivityDetailBinding>(R.layout.activity_detail) {
 
@@ -32,6 +35,26 @@ class DetailActivity : BindingActivity<ActivityDetailBinding>(R.layout.activity_
             lifecycleOwner = this@DetailActivity
             archcomponent = this@DetailActivity.architecture
             vm = viewModel
+        }
+
+        binding.wikiBtn.setOnClickListener {
+            startActivity(
+                Intent(
+                    Intent.ACTION_VIEW,
+                    Uri.parse(viewModel.architectureInfo?.wikipediaUrl)
+                )
+            )
+        }
+
+        binding.arBtn.setOnClickListener {
+            startActivity(
+                Intent(
+                    Intent.ACTION_VIEW,
+                    Uri.parse(
+                        viewModel.architectureInfo?.arUrl
+                    )
+                )
+            )
         }
     }
 

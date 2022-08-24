@@ -20,14 +20,15 @@ class DetailRepository @Inject constructor(
 ) {
 
     @WorkerThread
-    fun fetchPokemonInfo(
+    fun fetchArchInfo(
         name: String,
+        token : String,
         onComplete: () -> Unit,
         onError: (String?) -> Unit
     ) = flow<ArchitectureInfo?> {
         val architectureInfo = architectureInfoDao.getArchitectureInfo(name)
         if (architectureInfo == null) {
-            val response = architectureClient.fetchArchitectureInfo(name = name)
+            val response = architectureClient.fetchArchitectureInfo(name = name, token = token)
             response.suspendOnSuccess {
                 architectureInfoDao.insertArchitectureInfo(data)
                 emit(data)
