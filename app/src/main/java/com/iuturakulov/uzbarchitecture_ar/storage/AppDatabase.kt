@@ -1,12 +1,12 @@
 package com.iuturakulov.uzbarchitecture_ar.storage
 
+import android.content.Context
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import androidx.room.TypeConverters
 import com.iuturakulov.uzbarchitecture_ar.model.Architecture
 import com.iuturakulov.uzbarchitecture_ar.model.ArchitectureInfo
-import com.iuturakulov.uzbarchitecture_ar.storage.dao.ArchitectureDao
-import com.iuturakulov.uzbarchitecture_ar.storage.dao.ArchitectureInfoDao
+import com.iuturakulov.uzbarchitecture_ar.storage.ArchitectureInfoDao
+import dagger.hilt.android.qualifiers.ApplicationContext
 
 @Database(
     entities = [Architecture::class, ArchitectureInfo::class],

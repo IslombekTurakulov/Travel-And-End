@@ -1,4 +1,4 @@
-package com.iuturakulov.uzbarchitecture_ar.storage.dao
+package com.iuturakulov.uzbarchitecture_ar.storage
 
 import androidx.room.Dao
 import androidx.room.Insert

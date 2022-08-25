@@ -3,8 +3,8 @@ package com.iuturakulov.uzbarchitecture_ar.di
 import android.app.Application
 import androidx.room.Room
 import com.iuturakulov.uzbarchitecture_ar.storage.AppDatabase
-import com.iuturakulov.uzbarchitecture_ar.storage.dao.ArchitectureDao
-import com.iuturakulov.uzbarchitecture_ar.storage.dao.ArchitectureInfoDao
+import com.iuturakulov.uzbarchitecture_ar.storage.ArchitectureDao
+import com.iuturakulov.uzbarchitecture_ar.storage.ArchitectureInfoDao
 import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides
@@ -28,7 +28,7 @@ object PersistenceModule {
         application: Application,
     ): AppDatabase {
         return Room
-            .databaseBuilder(application, AppDatabase::class.java, "UzbArchitectureAR.db")
+            .databaseBuilder(application, AppDatabase::class.java, "uzb-architecture-ar.db")
             .fallbackToDestructiveMigration()
             .build()
     }

@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "82a88df0d8e1e0733f7cf8d80e1536ca",
+    "identityHash": "976e4fef1c6d960c05d5098555146743",
     "entities": [
       {
         "tableName": "Architecture",
@@ -38,7 +38,7 @@
       },
       {
         "tableName": "ArchitectureInfo",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `name` TEXT NOT NULL, `description` TEXT NOT NULL, `image` TEXT NOT NULL, `wikipedia` TEXT NOT NULL, `ar` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `name` TEXT NOT NULL, `description` TEXT NOT NULL, `imageUrl` TEXT NOT NULL, `wikipediaUrl` TEXT NOT NULL, `arUrl` TEXT NOT NULL, PRIMARY KEY(`id`))",
         "fields": [
           {
             "fieldPath": "id",
@@ -59,20 +59,20 @@
             "notNull": true
           },
           {
-            "fieldPath": "image",
-            "columnName": "image",
+            "fieldPath": "imageUrl",
+            "columnName": "imageUrl",
             "affinity": "TEXT",
             "notNull": true
           },
           {
-            "fieldPath": "wikipedia",
-            "columnName": "wikipedia",
+            "fieldPath": "wikipediaUrl",
+            "columnName": "wikipediaUrl",
             "affinity": "TEXT",
             "notNull": true
           },
           {
-            "fieldPath": "ar",
-            "columnName": "ar",
+            "fieldPath": "arUrl",
+            "columnName": "arUrl",
             "affinity": "TEXT",
             "notNull": true
           }
@@ -90,7 +90,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '82a88df0d8e1e0733f7cf8d80e1536ca')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '976e4fef1c6d960c05d5098555146743')"
     ]
   }
 }

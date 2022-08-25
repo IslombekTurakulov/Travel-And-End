@@ -1,7 +1,7 @@
 package com.iuturakulov.uzbarchitecture_ar.ui.repository
 
 import androidx.annotation.WorkerThread
-import com.iuturakulov.uzbarchitecture_ar.storage.dao.ArchitectureDao
+import com.iuturakulov.uzbarchitecture_ar.storage.ArchitectureDao
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flowOn

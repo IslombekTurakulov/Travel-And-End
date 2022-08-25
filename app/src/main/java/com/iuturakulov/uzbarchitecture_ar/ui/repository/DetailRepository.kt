@@ -3,7 +3,7 @@ package com.iuturakulov.uzbarchitecture_ar.ui.repository
 import androidx.annotation.WorkerThread
 import com.iuturakulov.uzbarchitecture_ar.model.ArchitectureInfo
 import com.iuturakulov.uzbarchitecture_ar.network.ArchitectureClient
-import com.iuturakulov.uzbarchitecture_ar.storage.dao.ArchitectureInfoDao
+import com.iuturakulov.uzbarchitecture_ar.storage.ArchitectureInfoDao
 import com.skydoves.sandwich.message
 import com.skydoves.sandwich.onError
 import com.skydoves.sandwich.onException

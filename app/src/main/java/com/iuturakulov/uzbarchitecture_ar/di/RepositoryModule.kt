@@ -17,8 +17,8 @@
 package com.iuturakulov.uzbarchitecture_ar.di
 
 import com.iuturakulov.uzbarchitecture_ar.network.ArchitectureClient
-import com.iuturakulov.uzbarchitecture_ar.storage.dao.ArchitectureDao
-import com.iuturakulov.uzbarchitecture_ar.storage.dao.ArchitectureInfoDao
+import com.iuturakulov.uzbarchitecture_ar.storage.ArchitectureDao
+import com.iuturakulov.uzbarchitecture_ar.storage.ArchitectureInfoDao
 import com.iuturakulov.uzbarchitecture_ar.ui.repository.DetailRepository
 import com.iuturakulov.uzbarchitecture_ar.ui.repository.MainRepository
 import dagger.Module
