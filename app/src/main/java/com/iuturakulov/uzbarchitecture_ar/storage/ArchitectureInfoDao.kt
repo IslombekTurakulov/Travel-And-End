@@ -12,6 +12,6 @@ interface ArchitectureInfoDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertArchitectureInfo(architectureInfo: ArchitectureInfo)
 
-    @Query("SELECT * FROM ArchitectureInfo WHERE name = :name_")
+    @Query("SELECT * FROM ${ArchitectureInfo.TABLE_NAME} WHERE ${ArchitectureInfo.COLUMN_ARCH_NAME} = :name_")
     suspend fun getArchitectureInfo(name_: String): ArchitectureInfo?
 }

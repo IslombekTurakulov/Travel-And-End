@@ -39,7 +39,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:paletteCard="@{cardView}"
-                app:paletteImage="@{archcomponent.imageUrl}" />
+                app:paletteImage="@{archcomponent.url}" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/architecture_name"

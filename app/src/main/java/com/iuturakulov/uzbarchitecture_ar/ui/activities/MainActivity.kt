@@ -8,7 +8,9 @@ import com.iuturakulov.uzbarchitecture_ar.databinding.ActivityMainBinding
 import com.iuturakulov.uzbarchitecture_ar.ui.adapter.ArchitectureAdapter
 import com.iuturakulov.uzbarchitecture_ar.ui.viewmodel.MainViewModel
 import com.skydoves.bindables.BindingActivity
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main) {
     @VisibleForTesting
     val viewModel: MainViewModel by viewModels()

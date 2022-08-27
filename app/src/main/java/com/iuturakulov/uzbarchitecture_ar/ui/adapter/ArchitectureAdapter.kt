@@ -2,7 +2,6 @@ package com.iuturakulov.uzbarchitecture_ar.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat.startActivity
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.iuturakulov.uzbarchitecture_ar.R

@@ -23,17 +23,17 @@ class DetailRepository @Inject constructor(
         onComplete: () -> Unit,
         onError: (String?) -> Unit
     ) = flow<ArchitectureInfo?> {
-        val pokemonInfo = architectureInfoDao.getArchitectureInfo(name)
-        if (pokemonInfo == null) {
+        val architectureInfo = architectureInfoDao.getArchitectureInfo(name)
+        if (architectureInfo == null) {
             val response = architectureClient.fetchArchitectureInfo(name = name, token = token)
             response.suspendOnSuccess {
                 architectureInfoDao.insertArchitectureInfo(data)
                 emit(data)
-            }.onError() {
+            }.onError {
                 onError("[Code ${statusCode}]: ${message()}")
             }.onException { onError(message) }
         } else {
-            emit(pokemonInfo)
+            emit(architectureInfo)
         }
     }.onCompletion { onComplete() }.flowOn(Dispatchers.IO)
 }

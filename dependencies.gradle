@@ -17,7 +17,7 @@ ext.versions = [
         // architecture components
         fragmentVersion      : '1.5.1',
         lifecycleVersion     : '2.5.1',
-        roomVersion          : '2.4.3',
+        roomVersion          : '2.3.0',
         archCompomentVersion : '2.1.0',
 
         // binding
