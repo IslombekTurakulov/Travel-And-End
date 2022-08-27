@@ -10,7 +10,7 @@ import javax.inject.Inject
 
 class MainRepository @Inject constructor(
     private val architectureDao: ArchitectureDao
-) {
+) : Repository {
 
     @WorkerThread
     fun getArchitectureList(
