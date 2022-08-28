@@ -13,6 +13,5 @@ import com.iuturakulov.uzbarchitecture_ar.model.ArchitectureInfo
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun architectureDao(): ArchitectureDao
-
     abstract fun architectureInfoDao(): ArchitectureInfoDao
 }

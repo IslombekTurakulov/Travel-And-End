@@ -69,17 +69,9 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.4.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-    implementation "androidx.fragment:fragment-ktx:$versions.fragmentVersion"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycleVersion"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$versions.lifecycleVersion"
-
     // Room
     implementation "androidx.room:room-runtime:$versions.roomVersion"
     implementation "androidx.room:room-ktx:$versions.roomVersion"
@@ -89,54 +81,67 @@ dependencies {
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
     implementation 'com.intuit.ssp:ssp-android:1.0.6'
 
+    implementation platform('com.google.firebase:firebase-bom:30.2.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation "com.github.skydoves:sandwich:1.2.7"
+
     // Android supports
     implementation "com.google.android.material:material:$versions.materialVersion"
 
-    // Binding
+    // Architecture components
+    implementation "androidx.fragment:fragment-ktx:$versions.fragmentVersion"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$versions.lifecycleVersion"
+    implementation "androidx.room:room-runtime:$versions.roomVersion"
+    implementation "androidx.room:room-ktx:$versions.roomVersion"
+    kapt "androidx.room:room-compiler:$versions.roomVersion"
+    testImplementation "androidx.arch.core:core-testing:$versions.archCompomentVersion"
+
+    // binding
     implementation "com.github.skydoves:bindables:$versions.bindablesVersion"
 
-    // Hilt
-    implementation "com.google.dagger:hilt-android:$versions.hiltCoreVersion"
-    kapt "com.google.dagger:hilt-compiler:$versions.hiltCoreVersion"
-    kapt "androidx.hilt:hilt-compiler:$versions.hiltVersion"
-    androidTestImplementation "com.google.dagger:hilt-android-testing:$versions.hiltCoreVersion"
-    kaptAndroidTest "com.google.dagger:hilt-compiler:$versions.hiltCoreVersion"
+    // startup
+    implementation "androidx.startup:startup-runtime:$versions.startupVersion"
 
-    // Network
+    // hilt
+    implementation "com.google.dagger:hilt-android:$versions.hiltVersion"
+    kapt "com.google.dagger:hilt-compiler:$versions.hiltVersion"
+    androidTestImplementation "com.google.dagger:hilt-android-testing:$versions.hiltVersion"
+    kaptAndroidTest "com.google.dagger:hilt-compiler:$versions.hiltVersion"
+
+    // network
     implementation "com.github.skydoves:sandwich:$versions.sandwichVersion"
     implementation "com.squareup.retrofit2:retrofit:$versions.retrofitVersion"
     implementation "com.squareup.retrofit2:converter-moshi:$versions.retrofitVersion"
     implementation "com.squareup.okhttp3:logging-interceptor:$versions.okhttpVersion"
     testImplementation "com.squareup.okhttp3:mockwebserver:$versions.okhttpVersion"
 
-    // Log
-    implementation "com.jakewharton.timber:timber:$versions.timberVersion"
-
-    // Moshi
+    // moshi
     implementation "com.squareup.moshi:moshi-kotlin:$versions.moshiVersion"
     kapt "com.squareup.moshi:moshi-kotlin-codegen:$versions.moshiVersion"
 
-    // Coroutines
+    // coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutinesVersion"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutinesVersion"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$versions.coroutinesVersion"
 
-    // Startup
-    implementation "androidx.startup:startup-runtime:$versions.startupVersion"
+    // whatIf
+    implementation "com.github.skydoves:whatif:$versions.whatIfVersion"
 
-    // Glide
+    // glide
     implementation "com.github.bumptech.glide:glide:$versions.glideVersion"
     implementation "com.github.florent37:glidepalette:$versions.glidePaletteVersion"
 
+    // bundler
+    implementation "com.github.skydoves:bundler:$versions.bundlerVersion"
+
+    // transformation
+    implementation "com.github.skydoves:transformationlayout:$versions.transformationLayout"
+
+    // recyclerView
+    implementation "androidx.recyclerview:recyclerview:$versions.recyclerView"
+    implementation "com.github.skydoves:baserecyclerviewadapter:$versions.baseAdapter"
     // Debugging
     implementation "com.jakewharton.timber:timber:$versions.timberVersion"
 
-    implementation platform('com.google.firebase:firebase-bom:30.2.0')
-    implementation 'com.google.firebase:firebase-analytics-ktx'
-    implementation "com.github.skydoves:sandwich:1.2.7"
-    // WhatIf
-    implementation "com.github.skydoves:whatif:$versions.whatIfVersion"
-
-    // Bundler
-    implementation "com.github.skydoves:bundler:$versions.bundlerVersion"
 }

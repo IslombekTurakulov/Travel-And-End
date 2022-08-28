@@ -10,7 +10,7 @@
             type="com.iuturakulov.uzbarchitecture_ar.ui.viewmodel.DetailViewModel" />
 
         <variable
-            name="archcomponent"
+            name="component"
             type="com.iuturakulov.uzbarchitecture_ar.model.Architecture" />
     </data>
 

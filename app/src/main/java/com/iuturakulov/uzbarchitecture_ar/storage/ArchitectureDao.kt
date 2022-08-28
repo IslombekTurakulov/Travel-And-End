@@ -9,6 +9,6 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface ArchitectureDao {
 
-    @Query("SELECT * FROM ${ArchitectureInfo.TABLE_NAME} ORDER BY ${ArchitectureInfo.COLUMN_ARCH_ID} ASC")
+    @Query("SELECT * FROM Architecture ORDER BY name ASC")
     fun getArchitectureList(): Flow<List<Architecture>>
 }

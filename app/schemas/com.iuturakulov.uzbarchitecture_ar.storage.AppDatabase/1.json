@@ -2,15 +2,15 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "4b835f2a00b05e1fafc40474b4a7a75c",
+    "identityHash": "976e4fef1c6d960c05d5098555146743",
     "entities": [
       {
         "tableName": "Architecture",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`title` INTEGER NOT NULL, `name` TEXT NOT NULL, `image_url` TEXT NOT NULL, PRIMARY KEY(`title`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `name` TEXT NOT NULL, `url` TEXT NOT NULL, PRIMARY KEY(`id`))",
         "fields": [
           {
             "fieldPath": "id",
-            "columnName": "title",
+            "columnName": "id",
             "affinity": "INTEGER",
             "notNull": true
           },
@@ -22,14 +22,14 @@
           },
           {
             "fieldPath": "url",
-            "columnName": "image_url",
+            "columnName": "url",
             "affinity": "TEXT",
             "notNull": true
           }
         ],
         "primaryKey": {
           "columnNames": [
-            "title"
+            "id"
           ],
           "autoGenerate": false
         },
@@ -37,12 +37,12 @@
         "foreignKeys": []
       },
       {
-        "tableName": "architecture_info",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`title` INTEGER NOT NULL, `name` TEXT NOT NULL, `description` TEXT NOT NULL, `image_url` TEXT NOT NULL, `wikipedia_url` TEXT NOT NULL, `ar_url` TEXT NOT NULL, PRIMARY KEY(`title`))",
+        "tableName": "ArchitectureInfo",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `name` TEXT NOT NULL, `description` TEXT NOT NULL, `imageUrl` TEXT NOT NULL, `wikipediaUrl` TEXT NOT NULL, `arUrl` TEXT NOT NULL, PRIMARY KEY(`id`))",
         "fields": [
           {
             "fieldPath": "id",
-            "columnName": "title",
+            "columnName": "id",
             "affinity": "INTEGER",
             "notNull": true
           },
@@ -60,46 +60,37 @@
           },
           {
             "fieldPath": "imageUrl",
-            "columnName": "image_url",
+            "columnName": "imageUrl",
             "affinity": "TEXT",
             "notNull": true
           },
           {
             "fieldPath": "wikipediaUrl",
-            "columnName": "wikipedia_url",
+            "columnName": "wikipediaUrl",
             "affinity": "TEXT",
             "notNull": true
           },
           {
             "fieldPath": "arUrl",
-            "columnName": "ar_url",
+            "columnName": "arUrl",
             "affinity": "TEXT",
             "notNull": true
           }
         ],
         "primaryKey": {
           "columnNames": [
-            "title"
+            "id"
           ],
           "autoGenerate": false
         },
-        "indices": [
-          {
-            "name": "index_architecture_info_name",
-            "unique": true,
-            "columnNames": [
-              "name"
-            ],
-            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `index_architecture_info_name` ON `${TABLE_NAME}` (`name`)"
-          }
-        ],
+        "indices": [],
         "foreignKeys": []
       }
     ],
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '4b835f2a00b05e1fafc40474b4a7a75c')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '976e4fef1c6d960c05d5098555146743')"
     ]
   }
 }

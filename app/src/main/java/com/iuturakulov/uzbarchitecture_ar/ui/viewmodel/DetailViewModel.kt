@@ -5,12 +5,13 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.iuturakulov.uzbarchitecture_ar.model.ArchitectureInfo
+import com.iuturakulov.uzbarchitecture_ar.ui.repository.DetailRepository
 import com.skydoves.bindables.BindingViewModel
 import com.skydoves.bindables.asBindingProperty
 import com.skydoves.bindables.bindingProperty
-import com.iuturakulov.uzbarchitecture_ar.ui.repository.DetailRepository
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedInject
+import dagger.hilt.android.lifecycle.HiltViewModel
 import timber.log.Timber
 
 class DetailViewModel @AssistedInject constructor(
