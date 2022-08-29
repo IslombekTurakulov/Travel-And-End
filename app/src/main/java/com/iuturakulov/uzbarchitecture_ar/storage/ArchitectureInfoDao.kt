@@ -13,6 +13,9 @@ interface ArchitectureInfoDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertArchitectureInfo(architectureInfo: ArchitectureInfo)
 
+    @Query("SELECT * FROM ArchitectureInfo WHERE id = :id_")
+    suspend fun getArchitecture(id_: Int): ArchitectureInfo?
+
     @Query("SELECT * FROM ArchitectureInfo ORDER BY id ASC")
     fun getArchitectureInfo(): Flow<List<ArchitectureInfo>>
 }

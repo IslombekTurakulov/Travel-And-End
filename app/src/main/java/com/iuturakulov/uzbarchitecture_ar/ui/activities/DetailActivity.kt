@@ -23,29 +23,14 @@ class DetailActivity : BindingActivity<ActivityDetailBinding>(R.layout.activity_
         binding {
             lifecycleOwner = this@DetailActivity
             component = this@DetailActivity.arch
-        }
-
-        binding.wikiBtn.setOnClickListener {
-            startActivity(
-                Intent(
-                    Intent.ACTION_VIEW,
-                    Uri.parse(arch.wikipediaUrl)
-                )
-            )
-        }
-
-        binding.arBtn.setOnClickListener {
-            startActivity(
-                Intent(
-                    Intent.ACTION_VIEW,
-                    Uri.parse(
-                        arch.arUrl
-                    )
-                )
-            )
+            wikiBtn.setOnClickListener {
+                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(arch.wikipediaUrl)))
+            }
+            arBtn.setOnClickListener {
+                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(arch.arUrl)))
+            }
         }
     }
-
 
     companion object {
         @VisibleForTesting

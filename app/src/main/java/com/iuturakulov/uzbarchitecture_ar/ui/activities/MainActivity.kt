@@ -5,6 +5,7 @@ import androidx.activity.viewModels
 import androidx.annotation.VisibleForTesting
 import com.iuturakulov.uzbarchitecture_ar.R
 import com.iuturakulov.uzbarchitecture_ar.databinding.ActivityMainBinding
+import com.iuturakulov.uzbarchitecture_ar.di.RecyclerViewBinding
 import com.iuturakulov.uzbarchitecture_ar.ui.adapter.ArchitectureAdapter
 import com.iuturakulov.uzbarchitecture_ar.ui.viewmodel.MainViewModel
 import com.skydoves.bindables.BindingActivity
@@ -21,6 +22,10 @@ class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main
             lifecycleOwner = this@MainActivity
             adapter = ArchitectureAdapter()
             vm = viewModel
+            floating.setOnClickListener {
+
+            }
         }
+
     }
 }

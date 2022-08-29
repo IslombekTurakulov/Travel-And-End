@@ -9,7 +9,10 @@ import com.skydoves.sandwich.onError
 import com.skydoves.sandwich.onException
 import com.skydoves.sandwich.suspendOnSuccess
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.flowOn
+import kotlinx.coroutines.flow.onStart
 import javax.inject.Inject
 
 class MainRepository @Inject constructor(
@@ -18,30 +21,26 @@ class MainRepository @Inject constructor(
 ) : Repository {
 
     @WorkerThread
-    fun getArchitectureList(
+    suspend fun getArchitectureList(
         onStart: () -> Unit,
         onError: (String?) -> Unit
-    ): Flow<List<ArchitectureInfo>> =
-        architectureInfoDao.getArchitectureInfo()
-            .onEmpty { fetchArchInfo(onStart, onError) }
-            .onStart { onStart() }
-            .catch { onError(it.localizedMessage) }
-            .flowOn(Dispatchers.IO)
-
-    @WorkerThread
-    fun fetchArchInfo(
-        onComplete: () -> Unit,
-        onError: (String?) -> Unit
-    ) = flow<ArchitectureInfo?> {
+    ): Flow<List<ArchitectureInfo>> {
         val response = architectureClient.fetchArchitectureInfo()
+        // No idea how to call this flow correctly :(
         response.suspendOnSuccess {
-            data.onEach {
-                architectureInfoDao.insertArchitectureInfo(it)
-                emit(it)
+            data.forEach {
+                if (architectureInfoDao.getArchitecture(it.id) == null) {
+                    architectureInfoDao.insertArchitectureInfo(it)
+                }
             }
         }.onError {
             onError("[Code ${statusCode}]: ${message()}")
         }.onException { onError(message) }
-    }.onCompletion { onComplete() }.flowOn(Dispatchers.IO)
+        return architectureInfoDao.getArchitectureInfo()
+            .onStart { onStart() }
+            .catch { onError(it.localizedMessage) }
+            .flowOn(Dispatchers.IO)
+    }
+
 }
 

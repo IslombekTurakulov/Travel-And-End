@@ -8,7 +8,6 @@ class ArchitectureClient @Inject constructor(
     private val architectureService: ArchitectureService
 ) {
 
-    suspend fun fetchArchitectureInfo(
-    ): ApiResponse<List<ArchitectureInfo>> =
+    suspend fun fetchArchitectureInfo(): ApiResponse<List<ArchitectureInfo>> =
         architectureService.fetchArchitectureInfo()
 }

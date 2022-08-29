@@ -8,6 +8,10 @@ import com.skydoves.bindables.BindingViewModel
 import com.skydoves.bindables.asBindingProperty
 import com.skydoves.bindables.bindingProperty
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.FlowPreview
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.filterNotNull
+import kotlinx.coroutines.flow.flatMapMerge
 import timber.log.Timber
 import javax.inject.Inject
 
@@ -24,10 +28,14 @@ class MainViewModel @Inject constructor(
     var isLoading: Boolean by bindingProperty(true)
         private set
 
-    private val architectureListFlow = mainRepository.getArchitectureList(
-        onStart = { isLoading = false },
-        onError = { errorMessage = it }
-    )
+    private val archFetchingModel: MutableStateFlow<ArchitectureInfo?> = MutableStateFlow(null)
+
+    @OptIn(FlowPreview::class)
+    private val architectureListFlow = archFetchingModel.filterNotNull().flatMapMerge {
+        mainRepository.getArchitectureList(
+            onStart = { isLoading = false },
+            onError = { errorMessage = it })
+    }
 
     @get:Bindable
     val architectureList: List<ArchitectureInfo>? by architectureListFlow.asBindingProperty(
