@@ -18,18 +18,19 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="32dp"
+            android:layout_marginBottom="@dimen/_32sdp"
             android:descendantFocusability="blocksDescendants">
 
-            <ImageView
+            <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/imageArch"
                 android:layout_width="match_parent"
                 android:layout_height="340dp"
                 android:contentDescription="@string/image_information"
+                android:scaleType="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:paletteImage="@{component.imageUrl}" />
+                app:loadImage="@{component.imageUrl}" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/architecture_name"

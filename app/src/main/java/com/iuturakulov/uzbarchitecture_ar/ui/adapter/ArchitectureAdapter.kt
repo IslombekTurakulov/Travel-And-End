@@ -10,11 +10,11 @@ import com.iuturakulov.uzbarchitecture_ar.model.ArchitectureInfo
 import com.iuturakulov.uzbarchitecture_ar.ui.activities.DetailActivity
 
 class ArchitectureAdapter
-    : RecyclerView.Adapter<ArchitectureAdapter.PokemonViewHolder>() {
+    : RecyclerView.Adapter<ArchitectureAdapter.ArchViewHolder>() {
 
     private val items: MutableList<ArchitectureInfo> = mutableListOf()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PokemonViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArchViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val binding =
             DataBindingUtil.inflate<ItemArchitectureBinding>(
@@ -23,7 +23,7 @@ class ArchitectureAdapter
                 parent,
                 false
             )
-        return PokemonViewHolder(binding).apply {
+        return ArchViewHolder(binding).apply {
             binding.root.setOnClickListener {
                 val position = bindingAdapterPosition.takeIf { it != RecyclerView.NO_POSITION }
                     ?: return@setOnClickListener
@@ -32,13 +32,13 @@ class ArchitectureAdapter
         }
     }
 
-    fun setPokemonList(pokemonList: List<ArchitectureInfo>) {
+    fun setArchList(archList: List<ArchitectureInfo>) {
         items.clear()
-        items.addAll(pokemonList)
+        items.addAll(archList)
         notifyDataSetChanged()
     }
 
-    override fun onBindViewHolder(holder: PokemonViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ArchViewHolder, position: Int) {
         holder.binding.apply {
             architecture = items[position]
             executePendingBindings()
@@ -47,7 +47,7 @@ class ArchitectureAdapter
 
     override fun getItemCount() = items.size
 
-    class PokemonViewHolder(val binding: ItemArchitectureBinding) :
+    class ArchViewHolder(val binding: ItemArchitectureBinding) :
         RecyclerView.ViewHolder(binding.root)
 }
 

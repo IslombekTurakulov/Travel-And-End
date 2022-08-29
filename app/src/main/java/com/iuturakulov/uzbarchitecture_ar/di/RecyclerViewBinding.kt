@@ -9,21 +9,21 @@ import com.skydoves.whatif.whatIfNotNullOrEmpty
 
 object RecyclerViewBinding {
 
-  @JvmStatic
-  @BindingAdapter("adapter")
-  fun bindAdapter(view: RecyclerView, adapter: RecyclerView.Adapter<*>) {
-    view.adapter = adapter.apply {
-      stateRestorationPolicy = RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
+    @JvmStatic
+    @BindingAdapter("adapter")
+    fun bindAdapter(view: RecyclerView, adapter: RecyclerView.Adapter<*>) {
+        view.adapter = adapter.apply {
+            stateRestorationPolicy = RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
+        }
     }
-  }
 
-  @JvmStatic
-  @BindingAdapter("adapterArchList")
-  fun bindAdapterArchList(view: RecyclerView, archList: List<ArchitectureInfo>?) {
-    archList.whatIfNotNullOrEmpty { itemList ->
-      view.adapter.whatIfNotNullAs<ArchitectureAdapter> { adapter ->
-        adapter.setPokemonList(itemList)
-      }
+    @JvmStatic
+    @BindingAdapter("adapterArchList")
+    fun bindAdapterArchList(view: RecyclerView, archList: List<ArchitectureInfo>?) {
+        archList.whatIfNotNullOrEmpty { itemList ->
+            view.adapter.whatIfNotNullAs<ArchitectureAdapter> { adapter ->
+                adapter.setArchList(itemList)
+            }
+        }
     }
-  }
 }

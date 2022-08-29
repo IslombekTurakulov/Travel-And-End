@@ -3,11 +3,10 @@ package com.iuturakulov.uzbarchitecture_ar.ui.viewmodel
 import androidx.databinding.Bindable
 import androidx.lifecycle.viewModelScope
 import com.iuturakulov.uzbarchitecture_ar.model.ArchitectureInfo
-import com.iuturakulov.uzbarchitecture_ar.network.ArchitectureService
-import com.skydoves.bindables.BindingViewModel
-import com.skydoves.bindables.bindingProperty
 import com.iuturakulov.uzbarchitecture_ar.ui.repository.MainRepository
+import com.skydoves.bindables.BindingViewModel
 import com.skydoves.bindables.asBindingProperty
+import com.skydoves.bindables.bindingProperty
 import dagger.hilt.android.lifecycle.HiltViewModel
 import timber.log.Timber
 import javax.inject.Inject
