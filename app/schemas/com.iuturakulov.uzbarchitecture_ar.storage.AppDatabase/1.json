@@ -2,40 +2,8 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "976e4fef1c6d960c05d5098555146743",
+    "identityHash": "9e8448148e3e8ce5756a37680f4464b1",
     "entities": [
-      {
-        "tableName": "Architecture",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `name` TEXT NOT NULL, `url` TEXT NOT NULL, PRIMARY KEY(`id`))",
-        "fields": [
-          {
-            "fieldPath": "id",
-            "columnName": "id",
-            "affinity": "INTEGER",
-            "notNull": true
-          },
-          {
-            "fieldPath": "name",
-            "columnName": "name",
-            "affinity": "TEXT",
-            "notNull": true
-          },
-          {
-            "fieldPath": "url",
-            "columnName": "url",
-            "affinity": "TEXT",
-            "notNull": true
-          }
-        ],
-        "primaryKey": {
-          "columnNames": [
-            "id"
-          ],
-          "autoGenerate": false
-        },
-        "indices": [],
-        "foreignKeys": []
-      },
       {
         "tableName": "ArchitectureInfo",
         "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `name` TEXT NOT NULL, `description` TEXT NOT NULL, `imageUrl` TEXT NOT NULL, `wikipediaUrl` TEXT NOT NULL, `arUrl` TEXT NOT NULL, PRIMARY KEY(`id`))",
@@ -90,7 +58,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '976e4fef1c6d960c05d5098555146743')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '9e8448148e3e8ce5756a37680f4464b1')"
     ]
   }
 }

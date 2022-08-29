@@ -1,57 +1,53 @@
 package com.iuturakulov.uzbarchitecture_ar.ui.adapter
 
-import android.os.SystemClock
+import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.DiffUtil
+import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.iuturakulov.uzbarchitecture_ar.R
 import com.iuturakulov.uzbarchitecture_ar.databinding.ItemArchitectureBinding
+import com.iuturakulov.uzbarchitecture_ar.model.ArchitectureInfo
 import com.iuturakulov.uzbarchitecture_ar.ui.activities.DetailActivity
-import com.skydoves.bindables.BindingListAdapter
-import com.skydoves.bindables.binding
 
-class ArchitectureAdapter :
-    BindingListAdapter<Architecture, ArchitectureAdapter.ArchitectureViewHolder>(diffUtil) {
+class ArchitectureAdapter
+    : RecyclerView.Adapter<ArchitectureAdapter.PokemonViewHolder>() {
 
-    private var onClickedAt = 0L
+    private val items: MutableList<ArchitectureInfo> = mutableListOf()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArchitectureViewHolder =
-        parent.binding<ItemArchitectureBinding>(R.layout.item_architecture)
-            .let(::ArchitectureViewHolder)
-
-    override fun onBindViewHolder(holder: ArchitectureViewHolder, position: Int) =
-        holder.bindPokemon(getItem(position))
-
-    inner class ArchitectureViewHolder constructor(
-        private val binding: ItemArchitectureBinding
-    ) : RecyclerView.ViewHolder(binding.root) {
-
-        init {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PokemonViewHolder {
+        val inflater = LayoutInflater.from(parent.context)
+        val binding =
+            DataBindingUtil.inflate<ItemArchitectureBinding>(
+                inflater,
+                R.layout.item_architecture,
+                parent,
+                false
+            )
+        return PokemonViewHolder(binding).apply {
             binding.root.setOnClickListener {
                 val position = bindingAdapterPosition.takeIf { it != RecyclerView.NO_POSITION }
                     ?: return@setOnClickListener
-                val currentClickedAt = SystemClock.elapsedRealtime()
-                if (currentClickedAt - onClickedAt > binding.transformationLayout.duration) {
-                    DetailActivity.startActivity(binding.transformationLayout, getItem(position))
-                    onClickedAt = currentClickedAt
-                }
+                DetailActivity.startActivity(binding.root, items[position])
             }
         }
+    }
 
-        fun bindPokemon(architecture: Architecture) {
-            binding.architecture = architecture
-            binding.executePendingBindings()
+    fun setPokemonList(pokemonList: List<ArchitectureInfo>) {
+        items.clear()
+        items.addAll(pokemonList)
+        notifyDataSetChanged()
+    }
+
+    override fun onBindViewHolder(holder: PokemonViewHolder, position: Int) {
+        holder.binding.apply {
+            architecture = items[position]
+            executePendingBindings()
         }
     }
 
-    companion object {
-        private val diffUtil = object : DiffUtil.ItemCallback<Architecture>() {
+    override fun getItemCount() = items.size
 
-            override fun areItemsTheSame(oldItem: Architecture, newItem: Architecture): Boolean =
-                oldItem.name == newItem.name
-
-            override fun areContentsTheSame(oldItem: Architecture, newItem: Architecture): Boolean =
-                oldItem == newItem
-        }
-    }
+    class PokemonViewHolder(val binding: ItemArchitectureBinding) :
+        RecyclerView.ViewHolder(binding.root)
 }
+

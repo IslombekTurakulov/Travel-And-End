@@ -34,12 +34,6 @@ object PersistenceModule {
 
     @Provides
     @Singleton
-    fun provideArchDao(appDatabase: AppDatabase): ArchitectureDao {
-        return appDatabase.architectureDao()
-    }
-
-    @Provides
-    @Singleton
     fun provideArchInfoDao(appDatabase: AppDatabase): ArchitectureInfoDao {
         return appDatabase.architectureInfoDao()
     }

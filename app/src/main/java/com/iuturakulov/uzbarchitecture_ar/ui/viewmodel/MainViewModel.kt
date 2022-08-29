@@ -15,7 +15,6 @@ import javax.inject.Inject
 @HiltViewModel
 class MainViewModel @Inject constructor(
     mainRepository: MainRepository,
-    architectureService: ArchitectureService
 ) : BindingViewModel() {
 
     @get:Bindable

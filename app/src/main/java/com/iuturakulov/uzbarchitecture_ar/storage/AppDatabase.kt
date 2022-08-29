@@ -5,12 +5,11 @@ import androidx.room.RoomDatabase
 import com.iuturakulov.uzbarchitecture_ar.model.ArchitectureInfo
 
 @Database(
-    entities = [Architecture::class, ArchitectureInfo::class],
+    entities = [ArchitectureInfo::class],
     version = 1,
     exportSchema = true
 )
 abstract class AppDatabase : RoomDatabase() {
 
-    abstract fun architectureDao(): ArchitectureDao
     abstract fun architectureInfoDao(): ArchitectureInfoDao
 }

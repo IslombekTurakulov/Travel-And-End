@@ -44,7 +44,7 @@
             android:scrollbarThumbVertical="@drawable/scrollbar"
             android:scrollbars="vertical"
             app:adapter="@{adapter}"
-            app:adapterPokemonList="@{vm.architectureList}"
+            app:adapterArchList="@{vm.architectureList}"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"

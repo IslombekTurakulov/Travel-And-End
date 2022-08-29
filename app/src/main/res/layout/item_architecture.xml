@@ -6,7 +6,7 @@
 
         <variable
             name="architecture"
-            type="com.iuturakulov.uzbarchitecture_ar.model.Architecture" />
+            type="com.iuturakulov.uzbarchitecture_ar.model.ArchitectureInfo" />
 
     </data>
 
@@ -44,7 +44,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:paletteCard="@{cardView}"
-                    app:paletteImage="@{architecture.url}" />
+                    app:paletteImage="@{architecture.imageUrl}" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/name"

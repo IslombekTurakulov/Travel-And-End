@@ -31,18 +31,10 @@ object RepositoryModule {
 
     @Provides
     @ViewModelScoped
-    fun provideMainRepository(
-        archDao: ArchitectureDao
-    ): MainRepository {
-        return MainRepository(archDao)
-    }
-
-    @Provides
-    @ViewModelScoped
     fun provideDetailRepository(
         archClient: ArchitectureClient,
         archInfoDao: ArchitectureInfoDao
-    ): DetailRepository {
-        return DetailRepository(archClient, archInfoDao)
+    ): MainRepository {
+        return MainRepository(archClient, archInfoDao)
     }
 }
