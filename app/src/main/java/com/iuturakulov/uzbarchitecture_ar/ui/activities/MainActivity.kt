@@ -5,15 +5,32 @@ import androidx.activity.viewModels
 import androidx.annotation.VisibleForTesting
 import com.iuturakulov.uzbarchitecture_ar.R
 import com.iuturakulov.uzbarchitecture_ar.databinding.ActivityMainBinding
+import com.iuturakulov.uzbarchitecture_ar.network.ArchitectureClient
+import com.iuturakulov.uzbarchitecture_ar.storage.ArchitectureInfoDao
 import com.iuturakulov.uzbarchitecture_ar.ui.adapter.ArchitectureAdapter
 import com.iuturakulov.uzbarchitecture_ar.ui.viewmodel.MainViewModel
 import com.skydoves.bindables.BindingActivity
+import com.skydoves.sandwich.message
+import com.skydoves.sandwich.suspendOnError
+import com.skydoves.sandwich.suspendOnSuccess
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import timber.log.Timber
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main) {
+
     @VisibleForTesting
     val viewModel: MainViewModel by viewModels()
+
+    @Inject
+    lateinit var architectureClient: ArchitectureClient
+
+    @Inject
+    lateinit var architectureInfoDao: ArchitectureInfoDao
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,10 +38,22 @@ class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main
             lifecycleOwner = this@MainActivity
             adapter = ArchitectureAdapter()
             vm = viewModel
-            floating.setOnClickListener {
+        }
+    }
 
+    override fun onStart() {
+        super.onStart()
+        CoroutineScope(Dispatchers.IO).launch {
+            val response = architectureClient.fetchArchitectureInfo()
+            response.suspendOnSuccess {
+                data.forEach {
+                    if (architectureInfoDao.getArchitecture(it.id) == null) {
+                        architectureInfoDao.insertArchitectureInfo(it)
+                    }
+                }
+            }.suspendOnError {
+                Timber.d(message())
             }
         }
-
     }
 }
