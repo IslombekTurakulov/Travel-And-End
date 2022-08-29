@@ -16,7 +16,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class DetailActivity : BindingActivity<ActivityDetailBinding>(R.layout.activity_detail) {
 
-    private val arch: ArchitectureInfo by bundleNonNull("ARCH_EXTRA")
+    private lateinit var arch: ArchitectureInfo
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

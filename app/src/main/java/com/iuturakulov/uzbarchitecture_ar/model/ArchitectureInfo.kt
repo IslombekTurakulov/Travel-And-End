@@ -17,7 +17,7 @@ data class ArchitectureInfo(
 ) {
     companion object {
         const val COLUMN_ARCH_NAME = "name"
-        const val COLUMN_ARCH_ID = "title"
+        const val COLUMN_ARCH_ID = "id"
         const val COLUMN_ARCH_DESC = "description"
         const val COLUMN_ARCH_IMAGE = "image_url"
         const val COLUMN_ARCH_WIKI = "wikipedia_url"

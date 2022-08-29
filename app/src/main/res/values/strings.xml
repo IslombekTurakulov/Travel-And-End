@@ -1,10 +1,8 @@
 <resources>
     <string name="app_name">UzbArchitecture-AR</string>
-    <string name="arch_title">%s</string>
     <string name="empty_architecture_placeholder">Empty Architecture models</string>
     <string name="see_in_wikipedia">See in Wikipedia</string>
     <string name="see_in_full_ar">See in full AR</string>
     <string name="image_information">Image information</string>
-    <string name="made_with">Made with</string>
     <string name="history">History</string>
 </resources>
