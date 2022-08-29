@@ -2,7 +2,6 @@ package com.iuturakulov.uzbarchitecture_ar.storage
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.iuturakulov.uzbarchitecture_ar.model.Architecture
 import com.iuturakulov.uzbarchitecture_ar.model.ArchitectureInfo
 
 @Database(

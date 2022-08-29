@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.iuturakulov.uzbarchitecture_ar.R
 import com.iuturakulov.uzbarchitecture_ar.databinding.ItemArchitectureBinding
-import com.iuturakulov.uzbarchitecture_ar.model.Architecture
 import com.iuturakulov.uzbarchitecture_ar.ui.activities.DetailActivity
 import com.skydoves.bindables.BindingListAdapter
 import com.skydoves.bindables.binding
@@ -40,7 +39,7 @@ class ArchitectureAdapter :
         }
 
         fun bindPokemon(architecture: Architecture) {
-            binding.component = architecture
+            binding.architecture = architecture
             binding.executePendingBindings()
         }
     }

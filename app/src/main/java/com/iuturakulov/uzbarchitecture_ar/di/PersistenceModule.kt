@@ -3,7 +3,6 @@ package com.iuturakulov.uzbarchitecture_ar.di
 import android.app.Application
 import androidx.room.Room
 import com.iuturakulov.uzbarchitecture_ar.storage.AppDatabase
-import com.iuturakulov.uzbarchitecture_ar.storage.ArchitectureDao
 import com.iuturakulov.uzbarchitecture_ar.storage.ArchitectureInfoDao
 import com.squareup.moshi.Moshi
 import dagger.Module

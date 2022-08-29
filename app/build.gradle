@@ -140,7 +140,7 @@ dependencies {
 
     // recyclerView
     implementation "androidx.recyclerview:recyclerview:$versions.recyclerView"
-    implementation "com.github.skydoves:baserecyclerviewadapter:$versions.baseAdapter"
+
     // Debugging
     implementation "com.jakewharton.timber:timber:$versions.timberVersion"
 

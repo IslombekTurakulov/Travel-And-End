@@ -2,7 +2,8 @@ package com.iuturakulov.uzbarchitecture_ar.ui.viewmodel
 
 import androidx.databinding.Bindable
 import androidx.lifecycle.viewModelScope
-import com.iuturakulov.uzbarchitecture_ar.model.Architecture
+import com.iuturakulov.uzbarchitecture_ar.model.ArchitectureInfo
+import com.iuturakulov.uzbarchitecture_ar.network.ArchitectureService
 import com.skydoves.bindables.BindingViewModel
 import com.skydoves.bindables.bindingProperty
 import com.iuturakulov.uzbarchitecture_ar.ui.repository.MainRepository
@@ -13,7 +14,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
-    mainRepository: MainRepository
+    mainRepository: MainRepository,
+    architectureService: ArchitectureService
 ) : BindingViewModel() {
 
     @get:Bindable
@@ -30,7 +32,7 @@ class MainViewModel @Inject constructor(
     )
 
     @get:Bindable
-    val architectureList: List<Architecture>? by architectureListFlow.asBindingProperty(
+    val architectureList: List<ArchitectureInfo>? by architectureListFlow.asBindingProperty(
         viewModelScope,
         null
     )

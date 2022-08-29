@@ -42,7 +42,7 @@
                 android:layout_marginTop="@dimen/_24sdp"
                 android:layout_marginBottom="@dimen/_36sdp"
                 android:paddingBottom="@dimen/_10sdp"
-                android:text="@{archcomponent.name}"
+                android:text="@{component.name}"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_32ssp"

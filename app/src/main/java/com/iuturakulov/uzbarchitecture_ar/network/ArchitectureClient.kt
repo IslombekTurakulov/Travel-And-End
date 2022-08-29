@@ -9,11 +9,7 @@ class ArchitectureClient @Inject constructor(
 ) {
 
     suspend fun fetchArchitectureInfo(
-        name: String,
-        token: String
-    ): ApiResponse<ArchitectureInfo> =
+    ): ApiResponse<List<ArchitectureInfo>> =
         architectureService.fetchArchitectureInfo(
-            name = name,
-            token = token
         )
 }

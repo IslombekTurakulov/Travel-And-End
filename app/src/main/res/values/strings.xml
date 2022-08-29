@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">UzbArchitecture-AR</string>
-    <string name="pokemon_name">%s</string>
+    <string name="arch_title">%s</string>
     <string name="empty_architecture_placeholder">Empty Architecture models</string>
     <string name="see_in_wikipedia">See in Wikipedia</string>
     <string name="see_in_full_ar">See in full AR</string>

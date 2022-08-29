@@ -4,7 +4,7 @@ import com.iuturakulov.uzbarchitecture_ar.extensions.Constants
 import com.iuturakulov.uzbarchitecture_ar.network.ArchitectureClient
 import com.iuturakulov.uzbarchitecture_ar.network.ArchitectureService
 import com.iuturakulov.uzbarchitecture_ar.network.HttpRequestInterceptor
-import com.skydoves.sandwich.coroutines.CoroutinesResponseCallAdapterFactory
+import com.skydoves.sandwich.adapters.ApiResponseCallAdapterFactory
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -33,7 +33,7 @@ object NetworkModule {
             .client(okHttpClient)
             .baseUrl(Constants.BASE_URL)
             .addConverterFactory(MoshiConverterFactory.create())
-            .addCallAdapterFactory(CoroutinesResponseCallAdapterFactory.create())
+            .addCallAdapterFactory(ApiResponseCallAdapterFactory.create())
             .build()
     }
 

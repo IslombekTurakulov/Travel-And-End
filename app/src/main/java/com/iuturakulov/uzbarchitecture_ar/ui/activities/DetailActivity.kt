@@ -8,7 +8,6 @@ import androidx.activity.viewModels
 import androidx.annotation.VisibleForTesting
 import com.iuturakulov.uzbarchitecture_ar.R
 import com.iuturakulov.uzbarchitecture_ar.databinding.ActivityDetailBinding
-import com.iuturakulov.uzbarchitecture_ar.model.Architecture
 import com.iuturakulov.uzbarchitecture_ar.ui.viewmodel.DetailViewModel
 import com.skydoves.bindables.BindingActivity
 import com.skydoves.bundler.bundleNonNull
@@ -24,17 +23,16 @@ class DetailActivity : BindingActivity<ActivityDetailBinding>(R.layout.activity_
 
     @VisibleForTesting
     val viewModel: DetailViewModel by viewModels {
-        DetailViewModel.provideFactory(detailViewModelFactory, architecture.name)
+        DetailViewModel.provideFactory(detailViewModelFactory, arch.name)
     }
 
-    private val architecture: Architecture by bundleNonNull("ARCH_EXTRA")
+    private val arch: Architecture by bundleNonNull("ARCH_EXTRA")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding {
             lifecycleOwner = this@DetailActivity
-            archcomponent = this@DetailActivity.architecture
+            component = this@DetailActivity.arch
             vm = viewModel
         }
 

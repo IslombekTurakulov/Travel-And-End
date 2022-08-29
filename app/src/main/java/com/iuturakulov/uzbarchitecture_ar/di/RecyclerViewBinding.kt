@@ -2,7 +2,6 @@ package com.iuturakulov.uzbarchitecture_ar.di
 
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.iuturakulov.uzbarchitecture_ar.model.Architecture
 import com.iuturakulov.uzbarchitecture_ar.ui.adapter.ArchitectureAdapter
 import com.skydoves.whatif.whatIfNotNullAs
 import com.skydoves.whatif.whatIfNotNullOrEmpty
