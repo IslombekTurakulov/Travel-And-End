@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Registan",
     "description": "The Registan (Uzbek: Регистон, Registon) was the heart of the ancient city of Samarkand of the Timurid Empire, now in Uzbekistan. The name Rēgistan (ریگستان) means \"sandy place\" or \"desert\" in Persian.\n\nThe Registan was a public square, where people gathered to hear royal proclamations, heralded by blasts on enormous copper pipes called dzharchis - and a place of public executions. It is framed by three madrasahs (Islamic schools) of distinctive Islamic architecture. The square was regarded as the hub of the Timurid Renaissance.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Registan_Samarkand.jpg/800px-Registan_Samarkand.jpg",
+    "image_url": "https://cdn.glitch.global/6353c9fa-e368-48f6-9431-cbe2b9f6ed96/registan.jpg?v=1661375770031",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Registan",
     "ar_url": "https://uzbarchitecture-ar.glitch.me/"
   },
@@ -11,7 +11,7 @@
     "id": 2,
     "name": "Обсерватория Улугбека",
     "description": "Обсерватория Улугбека (узб. Ulug‘bek rasadxonasi) — одна из наиболее значительных обсерваторий средневековья, построенная Улугбеком на холме Кухак в окрестностях Самарканда в 1424—1428 годах.",
-    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Samarkand_observatoire_ulugh_beg.jpg/450px-Samarkand_observatoire_ulugh_beg.jpg",
+    "image_url": "https://cdn.glitch.global/ddb785eb-d8ec-4d5b-ac8f-4eec7baf04d9/ulugh_beg_observatory.jpg?v=1661097388220",
     "wikipedia_url": "https://ru.wikipedia.org/wiki/Обсерватория_Улугбека",
     "ar_url": "https://uzbarchitecture-ar.glitch.me/index.html"
   },
@@ -19,7 +19,7 @@
     "id": 3,
     "name": "Монумент Амира Тимура",
     "description": "Тамерла́н, Тиму́р (чагат., تیمور [Timür, Timōr]; 9 апреля 1336, Кеш, совр. Узбекистан — 19 февраля 1405, Отрар, совр. Казахстан) — среднеазиатский тюрко-монгольский военачальник и завоеватель, сыгравший существенную роль в истории Средней, Южной и Западной Азии, а также Кавказа, Поволжья и Руси.\n\nОснователь империи Тимуридов (около 1370 года) со столицей в Самарканде.",
-    "image_url": "https://www.technopat.net/sosyal/eklenti/timurlenk-jpg.106682/",
+    "image_url": "https://cdn.glitch.global/ddb785eb-d8ec-4d5b-ac8f-4eec7baf04d9/amir.jpg?v=1661085999175",
     "wikipedia_url": "https://ru.wikipedia.org/wiki/Тамерлан",
     "ar_url": "https://uzbarchitecture-ar.glitch.me/amirtemur.html"
   },
@@ -27,7 +27,7 @@
     "id": 4,
     "name": "Гробница Амира Тимура",
     "description": "Гур-Эми́р(узб. Go'ri Amir от перс. گورِ امیر «Гробница эмира») — мавзолей Тамерлана (Амира Тимура), его наставника Мир Сайид Барака, и некоторых членов семьи Тимура — (Тимуридов) в Самарканде (Узбекистан). Также интерпретируется как \"Гури Мир\" — могила миров, имеется в виду Мир Саид Барака.\n\nВ 2014 году решением Межпарламентской Ассамблеи стран-участниц СНГ внесён в список достопримечательностей «Жемчужин Содружества».",
-    "image_url": "http://dkm.gov.uz/uploads/2020/05/oralapzoapdrapyv-800x600.jpg",
+    "image_url": "https://cdn.glitch.global/ddb785eb-d8ec-4d5b-ac8f-4eec7baf04d9/tombAmirTemur.jpg?v=1661088003206",
     "wikipedia_url": "https://ru.wikipedia.org/wiki/Гур-Эмир",
     "ar_url": "https://uzbarchitecture-ar.glitch.me/amirtemur.html"
   }
