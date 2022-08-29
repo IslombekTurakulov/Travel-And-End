@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "name": "Registan",
     "description": "The Registan (Uzbek: Регистон, Registon) was the heart of the ancient city of Samarkand of the Timurid Empire, now in Uzbekistan. The name Rēgistan (ریگستان) means \"sandy place\" or \"desert\" in Persian.\n\nThe Registan was a public square, where people gathered to hear royal proclamations, heralded by blasts on enormous copper pipes called dzharchis - and a place of public executions. It is framed by three madrasahs (Islamic schools) of distinctive Islamic architecture. The square was regarded as the hub of the Timurid Renaissance.",
     "image_url": "https://cdn.glitch.global/6353c9fa-e368-48f6-9431-cbe2b9f6ed96/registan.jpg?v=1661375770031",
@@ -8,7 +8,7 @@
     "ar_url": "https://uzbarchitecture-ar.glitch.me/"
   },
   {
-    "id": 2,
+    "id": "2",
     "name": "Ulugh Beg Observatory",
     "description": "The Ulugh Beg Observatory is an observatory in Samarkand, Uzbekistan. Built in the 1420s by the Timurid astronomer Ulugh Beg. Islamic astronomers who worked at the observatory include Al-Kashi, Ali Qushji, and Ulugh Beg himself. The observatory was destroyed in 1449 and rediscovered in 1908.",
     "image_url": "https://cdn.glitch.global/ddb785eb-d8ec-4d5b-ac8f-4eec7baf04d9/ulugh_beg_observatory.jpg?v=1661097388220",
@@ -16,7 +16,7 @@
     "ar_url": "https://uzbarchitecture-ar.glitch.me/ulugh-beg.html"
   },
   {
-    "id": 3,
+    "id": "3",
     "name": "The monument to Amir Timur",
     "description": "The monument to Emir Timur is a bronze equestrian monument to Tamerlane, a statesman and commander, one of the founders of the Uzbek statehood.\n\nThe monument, the work of sculptors Ilham Jabbarov and Kamill Jabbarov, was opened on August 31, 1993 in the center of Tashkent, in the central square of the city, renamed in honor of Amir Temur. The opening of the monument, attended by President Islam Karimov, was timed to coincide with the celebration of the second anniversary of the country's independence.\n\nThe sculpture depicts Tamerlane sitting astride a horse in full marching attire, wearing a helmet made in the form of a royal crown, with a saber in a scabbard on his belt, which was a distinctive feature of the military class of that era and with a shield strapped to the saddle. The commander holds the reins of the horse with his left hand, the right hand is raised up. The name of the ruler \"AMIR TEMUR\" and his motto \"power in justice\" are engraved on the pedestal of the monument in four languages — Uzbek, Russian, English and Arabic.",
     "image_url": "https://cdn.glitch.global/ddb785eb-d8ec-4d5b-ac8f-4eec7baf04d9/amir.jpg?v=1661085999175",
@@ -24,7 +24,7 @@
     "ar_url": "https://uzbarchitecture-ar.glitch.me/amirtemur.html"
   },
   {
-    "id": 4,
+    "id": "4",
     "name": "Tomb of Amir Temur",
     "description": "The Gūr-i Amīr or Guri Amir (Uzbek: Amir Temur maqbarasi, Go'ri Amir, Persian: گورِ امیر) is a mausoleum of the Turco-Mongol conqueror Timur (also known as Tamerlane) in Samarkand, Uzbekistan. It occupies an important place in the history of Central Asian Architecture as the precursor for and had influence on later Great Mughal architecture tombs, including Gardens of Babur in Kabul, Humayun's Tomb in Delhi and the Taj Mahal in Agra, built by Timur's Indian descendants, Turco-Mongols that followed Indian culture with Central Asian influences, Mughals established the ruling Mughal dynasty of the Indian subcontinent. The mausoleum has been heavily restored.",
     "image_url": "https://cdn.glitch.global/ddb785eb-d8ec-4d5b-ac8f-4eec7baf04d9/tombAmirTemur.jpg?v=1661088003206",
