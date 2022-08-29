@@ -1,6 +1,14 @@
 [
   {
-    "id": "1",
+    "id": 1,
+    "name": "Registan",
+    "description": "The Registan (Uzbek: Регистон, Registon) was the heart of the ancient city of Samarkand of the Timurid Empire, now in Uzbekistan. The name Rēgistan (ریگستان) means \"sandy place\" or \"desert\" in Persian.\n\nThe Registan was a public square, where people gathered to hear royal proclamations, heralded by blasts on enormous copper pipes called dzharchis - and a place of public executions. It is framed by three madrasahs (Islamic schools) of distinctive Islamic architecture. The square was regarded as the hub of the Timurid Renaissance.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Registan_Samarkand.jpg/800px-Registan_Samarkand.jpg",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Registan",
+    "ar_url": "https://uzbarchitecture-ar.glitch.me/"
+  },
+  {
+    "id": 2,
     "name": "Обсерватория Улугбека",
     "description": "Обсерватория Улугбека (узб. Ulug‘bek rasadxonasi) — одна из наиболее значительных обсерваторий средневековья, построенная Улугбеком на холме Кухак в окрестностях Самарканда в 1424—1428 годах.",
     "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Samarkand_observatoire_ulugh_beg.jpg/450px-Samarkand_observatoire_ulugh_beg.jpg",
@@ -8,7 +16,7 @@
     "ar_url": "https://uzbarchitecture-ar.glitch.me/index.html"
   },
   {
-    "id": "2",
+    "id": 3,
     "name": "Монумент Амира Тимура",
     "description": "Тамерла́н, Тиму́р (чагат., تیمور [Timür, Timōr]; 9 апреля 1336, Кеш, совр. Узбекистан — 19 февраля 1405, Отрар, совр. Казахстан) — среднеазиатский тюрко-монгольский военачальник и завоеватель, сыгравший существенную роль в истории Средней, Южной и Западной Азии, а также Кавказа, Поволжья и Руси.\n\nОснователь империи Тимуридов (около 1370 года) со столицей в Самарканде.",
     "image_url": "https://www.technopat.net/sosyal/eklenti/timurlenk-jpg.106682/",
@@ -16,7 +24,7 @@
     "ar_url": "https://uzbarchitecture-ar.glitch.me/amirtemur.html"
   },
   {
-    "id": "3",
+    "id": 4,
     "name": "Гробница Амира Тимура",
     "description": "Гур-Эми́р(узб. Go'ri Amir от перс. گورِ امیر «Гробница эмира») — мавзолей Тамерлана (Амира Тимура), его наставника Мир Сайид Барака, и некоторых членов семьи Тимура — (Тимуридов) в Самарканде (Узбекистан). Также интерпретируется как \"Гури Мир\" — могила миров, имеется в виду Мир Саид Барака.\n\nВ 2014 году решением Межпарламентской Ассамблеи стран-участниц СНГ внесён в список достопримечательностей «Жемчужин Содружества».",
     "image_url": "http://dkm.gov.uz/uploads/2020/05/oralapzoapdrapyv-800x600.jpg",

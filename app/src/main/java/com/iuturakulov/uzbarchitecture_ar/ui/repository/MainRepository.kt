@@ -12,7 +12,6 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.onStart
-import kotlinx.coroutines.runBlocking
 import javax.inject.Inject
 
 class MainRepository @Inject constructor(
@@ -25,8 +24,17 @@ class MainRepository @Inject constructor(
         onStart: () -> Unit,
         onError: (String?) -> Unit
     ): Flow<List<ArchitectureInfo>> {
-        runBlocking {
-            insertArch(onError = onError)
+        suspend {
+            architectureClient.fetchArchitectureInfo()
+                .suspendOnSuccess {
+                    data.let {
+                        it.forEach { data ->
+                            architectureInfoDao.insertArchitectureInfo(data)
+                        }
+                    }
+                }.suspendOnError {
+                    onError(message())
+                }
         }
         return architectureInfoDao.getArchitectureInfo()
             .onStart { onStart() }
@@ -34,7 +42,7 @@ class MainRepository @Inject constructor(
             .flowOn(Dispatchers.IO)
     }
 
-
+/*
     @WorkerThread
     suspend fun insertArch(
         onError: (String?) -> Unit
@@ -47,6 +55,6 @@ class MainRepository @Inject constructor(
         }.suspendOnError {
             onError(message())
         }
-    }
+    }*/
 }
 
