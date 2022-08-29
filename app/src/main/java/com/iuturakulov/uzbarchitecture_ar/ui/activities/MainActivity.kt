@@ -6,6 +6,7 @@ import androidx.annotation.VisibleForTesting
 import com.iuturakulov.uzbarchitecture_ar.R
 import com.iuturakulov.uzbarchitecture_ar.databinding.ActivityMainBinding
 import com.iuturakulov.uzbarchitecture_ar.network.ArchitectureClient
+import com.iuturakulov.uzbarchitecture_ar.network.NetworkConnectivityObserver
 import com.iuturakulov.uzbarchitecture_ar.storage.ArchitectureInfoDao
 import com.iuturakulov.uzbarchitecture_ar.ui.adapter.ArchitectureAdapter
 import com.iuturakulov.uzbarchitecture_ar.ui.viewmodel.MainViewModel
@@ -13,6 +14,7 @@ import com.skydoves.bindables.BindingActivity
 import com.skydoves.sandwich.message
 import com.skydoves.sandwich.suspendOnError
 import com.skydoves.sandwich.suspendOnSuccess
+import com.skydoves.transformationlayout.onTransformationStartContainer
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -32,7 +34,12 @@ class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main
     @Inject
     lateinit var architectureInfoDao: ArchitectureInfoDao
 
+    @Inject
+    lateinit var connectivityObserver: NetworkConnectivityObserver
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        onTransformationStartContainer()
         super.onCreate(savedInstanceState)
         binding {
             lifecycleOwner = this@MainActivity
