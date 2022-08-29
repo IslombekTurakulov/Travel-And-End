@@ -6,6 +6,6 @@ import retrofit2.http.GET
 
 interface ArchitectureService {
 
-    @GET("/architectures_en.json")
+    @GET("architectures_en.json")
     suspend fun fetchArchitectureInfo(): ApiResponse<List<ArchitectureInfo>>
 }
