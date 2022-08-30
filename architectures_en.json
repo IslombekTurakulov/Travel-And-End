@@ -30,5 +30,29 @@
     "image_url": "https://cdn.glitch.global/ddb785eb-d8ec-4d5b-ac8f-4eec7baf04d9/tombAmirTemur.jpg?v=1661088003206",
     "wikipedia_url": "https://en.wikipedia.org/wiki/Gur-e-Amir",
     "ar_url": "https://uzbarchitecture-ar.glitch.me/amirtemur.html"
+  },
+  {
+    "id": "5",
+    "name": "Architectural fragment Bibi-Khanym Mosque",
+    "description": "The Bibi-Khanym Mosque (Uzbek: Bibi-Xonim masjidi; Persian: مسجد بی بی خانم; also variously spelled as Khanum, Khanom, Hanum, Hanim) is one of the most important monuments of Samarkand, Uzbekistan. In the 15th century, it was one of the largest and most magnificent mosques in the Islamic world. It is considered a masterpiece of the Timurid Renaissance. By the mid-20th century, only a grandiose ruin of it still survived, but major parts of the mosque were restored during the Soviet period.",
+    "image_url": "https://cdn.glitch.global/6353c9fa-e368-48f6-9431-cbe2b9f6ed96/fragment_bibi_khamin.jpg?v=1661850319496",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Bibi-Khanym_Mosque",
+    "ar_url": "https://uzbarchitecture-ar.glitch.me/fragment-bibi-khanim.html"
+  },
+  {
+    "id": "6",
+    "name": "Gur-i Amir Mausoleum",
+    "description": "The Gūr-i Amīr or Guri Amir (Uzbek: Amir Temur maqbarasi, Go'ri Amir, Persian: گورِ امیر) is a mausoleum of the Turco-Mongol conqueror Timur (also known as Tamerlane) in Samarkand, Uzbekistan. It occupies an important place in the history of Central Asian Architecture as the precursor for and had influence on later Great Mughal architecture tombs, including Gardens of Babur in Kabul, Humayun's Tomb in Delhi and the Taj Mahal in Agra, built by Timur's Indian descendants, Turco-Mongols that followed Indian culture with Central Asian influences, Mughals established the ruling Mughal dynasty of the Indian subcontinent. The mausoleum has been heavily restored.",
+    "image_url": "https://cdn.glitch.global/6353c9fa-e368-48f6-9431-cbe2b9f6ed96/gur_emir.jpg?v=1661849929491",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Gur-e-Amir",
+    "ar_url": "https://uzbarchitecture-ar.glitch.me/gur-i-amir.html"
+  },
+  {
+    "id": "7",
+    "name": "Mausoleum Interior Gur-i Amir",
+    "description": "Interior View. a mausoleum of the Turco-Mongol conqueror Timur (also known as Tamerlane) in Samarkand, Uzbekistan. Gur-e Amir is Persian for “Tomb of the King”. This architectural complex with its azure dome contains the tombs of Tamerlane, his sons Shah Rukh and Miran Shah and grandsons Ulugh Beg and Muhammad Sultan. Also honoured with a place in the tomb is Timur’s teacher Sayyid Baraka.\n\nThe earliest part of the complex was built at the end of the 14th century by the orders of Muhammad Sultan. Now only the foundations of the madrasah and khanaka, the entrance portal and a part of one of four minarets remains.",
+    "image_url": "https://cdn.glitch.global/6353c9fa-e368-48f6-9431-cbe2b9f6ed96/mausoleum_interior_gur_emir.jpg?v=1661849928842",
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Gur-e-Amir",
+    "ar_url": "https://uzbarchitecture-ar.glitch.me/mausoleum-gur-i-amir.html"
   }
 ]

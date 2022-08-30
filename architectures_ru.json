@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "name": "Registan",
     "description": "The Registan (Uzbek: Регистон, Registon) was the heart of the ancient city of Samarkand of the Timurid Empire, now in Uzbekistan. The name Rēgistan (ریگستان) means \"sandy place\" or \"desert\" in Persian.\n\nThe Registan was a public square, where people gathered to hear royal proclamations, heralded by blasts on enormous copper pipes called dzharchis - and a place of public executions. It is framed by three madrasahs (Islamic schools) of distinctive Islamic architecture. The square was regarded as the hub of the Timurid Renaissance.",
     "image_url": "https://cdn.glitch.global/6353c9fa-e368-48f6-9431-cbe2b9f6ed96/registan.jpg?v=1661375770031",
@@ -8,7 +8,7 @@
     "ar_url": "https://uzbarchitecture-ar.glitch.me/"
   },
   {
-    "id": 2,
+    "id": "2",
     "name": "Обсерватория Улугбека",
     "description": "Обсерватория Улугбека (узб. Ulug‘bek rasadxonasi) — одна из наиболее значительных обсерваторий средневековья, построенная Улугбеком на холме Кухак в окрестностях Самарканда в 1424—1428 годах.",
     "image_url": "https://cdn.glitch.global/ddb785eb-d8ec-4d5b-ac8f-4eec7baf04d9/ulugh_beg_observatory.jpg?v=1661097388220",
@@ -16,7 +16,7 @@
     "ar_url": "https://uzbarchitecture-ar.glitch.me/index.html"
   },
   {
-    "id": 3,
+    "id": "3",
     "name": "Монумент Амира Тимура",
     "description": "Тамерла́н, Тиму́р (чагат., تیمور [Timür, Timōr]; 9 апреля 1336, Кеш, совр. Узбекистан — 19 февраля 1405, Отрар, совр. Казахстан) — среднеазиатский тюрко-монгольский военачальник и завоеватель, сыгравший существенную роль в истории Средней, Южной и Западной Азии, а также Кавказа, Поволжья и Руси.\n\nОснователь империи Тимуридов (около 1370 года) со столицей в Самарканде.",
     "image_url": "https://cdn.glitch.global/ddb785eb-d8ec-4d5b-ac8f-4eec7baf04d9/amir.jpg?v=1661085999175",
@@ -30,5 +30,29 @@
     "image_url": "https://cdn.glitch.global/ddb785eb-d8ec-4d5b-ac8f-4eec7baf04d9/tombAmirTemur.jpg?v=1661088003206",
     "wikipedia_url": "https://ru.wikipedia.org/wiki/Гур-Эмир",
     "ar_url": "https://uzbarchitecture-ar.glitch.me/amirtemur.html"
+  },
+  {
+    "id": "5",
+    "name": "Архитектурный фрагмент из Биби-Ханум",
+    "description": "Мавзолей Биби-Ханум, находится напротив соборной мечети Тимура, был заложен для матери, жены и других женщин из рода Тимуридов.\n\nПо описаниям Клавихо, первой была захоронена мать Биби-Ханум. Здесь же была похоронена сама Сарай Мульк-ханым. В 1941 году антропологом Михаилом Герасимовым была открыта могила и изучены останки погребенных.\n\nВ 2000 годах по иницитиве Первого Президента Узбекистана И.А. Каримова памятник был отреставрирован. Он входит в ансамбль мавзолеев Самарканда. Скромный внешний облик обманчив: в интерьере сказочно красивые сталактиты цвета слоновой кости.",
+    "image_url": "https://cdn.glitch.global/6353c9fa-e368-48f6-9431-cbe2b9f6ed96/fragment_bibi_khamin.jpg?v=1661850319496",
+    "wikipedia_url": "https://ru.wikipedia.org/wiki/Мавзолей_Биби_Ханум",
+    "ar_url": "https://uzbarchitecture-ar.glitch.me/fragment-bibi-khanim.html"
+  },
+  {
+    "id": "6",
+    "name": "Мавзолей Гур-Эмир",
+    "description": "Гур-Эми́р (узб. Go'ri Amir от перс. گورِ امیر\u200E\u200E «Гробница эмира») — мавзолей Тамерлана (Амира Тимура), его наставника Мир Сайид Барака, и некоторых членов семьи Тимура — (Тимуридов) в Самарканде (Узбекистан). Также интерпретируется как \"Гури Мир\" — могила миров, имеется в виду Мир Саид Барака.[3]\n\nВ 2014 году решением Межпарламентской Ассамблеи стран-участниц СНГ внесён в список достопримечательностей «Жемчужин Содружества».",
+    "image_url": "https://cdn.glitch.global/6353c9fa-e368-48f6-9431-cbe2b9f6ed96/gur_emir.jpg?v=1661849929491",
+    "wikipedia_url": "https://ru.wikipedia.org/wiki/Гур-Эмир",
+    "ar_url": "https://uzbarchitecture-ar.glitch.me/gur-i-amir.html"
+  },
+  {
+    "id": "7",
+    "name": "Интерьер Мавзолея Гур-Эмир",
+    "description": "Вид изнутри. мавзолей тюрко-монгольского завоевателя Тимура (также известного как Тамерлан) в Самарканде, Узбекистан. Гур-э Амир по-персидски означает “Гробница царя”. В этом архитектурном комплексе с лазурным куполом находятся гробницы Тамерлана, его сыновей Шахрукха и Миран-шаха, а также внуков Улугбека и Мухаммада Султана. Также почетное место в гробнице принадлежит учителю Тимура Сайиду Бараке.\n\n Самая ранняя часть комплекса была построена в конце 14 века по приказу Мухаммада Султана. Сейчас сохранились только фундаменты медресе и ханаки, входной портал и часть одного из четырех минаретов.",
+    "image_url": "https://cdn.glitch.global/6353c9fa-e368-48f6-9431-cbe2b9f6ed96/mausoleum_interior_gur_emir.jpg?v=1661849928842",
+    "wikipedia_url": "https://ru.wikipedia.org/wiki/Гур-Эмир",
+    "ar_url": "https://uzbarchitecture-ar.glitch.me/mausoleum-gur-i-amir.html"
   }
 ]
