@@ -27,7 +27,7 @@
             android:name=".ui.activities.MainActivity"
             android:exported="true"
             android:launchMode="singleTop"
-            android:screenOrientation="fullSensor">
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -38,12 +38,14 @@
             android:name=".ui.activities.DetailActivity"
             android:exported="false"
             android:launchMode="singleTop"
+            android:screenOrientation="fullSensor"
             android:theme="@style/Theme.UzbArchitectureAR.NoActionBar" />
 
         <activity
             android:name=".ui.activities.WebViewActivity"
             android:exported="false"
             android:launchMode="singleTop"
+            android:screenOrientation="fullSensor"
             android:theme="@style/Theme.UzbArchitectureAR.ActionBar" />
 
         <meta-data
