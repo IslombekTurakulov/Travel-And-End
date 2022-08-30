@@ -8,4 +8,7 @@
 <img src="/previews/screenshot.jpg"/>
 </p>
 
+## Find this repository useful? :heart:
+
 <h6 align="center">This project was inspired by the development of Jaewoong Eum</h6>
+
