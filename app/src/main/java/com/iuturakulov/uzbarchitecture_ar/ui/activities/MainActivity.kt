@@ -31,7 +31,8 @@ class MainActivity : BindingActivity<ActivityMainBinding>(R.layout.activity_main
             adapter = ArchitectureAdapter()
             vm = viewModel
         }
-
-
+        viewModel.architectureLiveData.observe(this) {
+            binding.adapter?.setArchList(it!!)
+        }
     }
 }

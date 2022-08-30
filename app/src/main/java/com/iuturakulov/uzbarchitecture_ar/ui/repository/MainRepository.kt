@@ -4,6 +4,7 @@ import androidx.annotation.WorkerThread
 import com.iuturakulov.uzbarchitecture_ar.model.ArchitectureInfo
 import com.iuturakulov.uzbarchitecture_ar.network.ArchitectureClient
 import com.iuturakulov.uzbarchitecture_ar.storage.ArchitectureInfoDao
+import com.skydoves.sandwich.ApiResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
@@ -25,6 +26,20 @@ class MainRepository @Inject constructor(
             .onStart { onStart() }
             .catch { onError(it.localizedMessage) }
             .flowOn(Dispatchers.IO)
+    }
+
+    @WorkerThread
+    suspend fun updateArchitectureInfo(
+    ): ApiResponse<List<ArchitectureInfo>> {
+        return architectureClient.fetchArchitectureInfo()
+    }
+
+    suspend fun insertArchitectureInfo(architectureInfo: List<ArchitectureInfo>) {
+        architectureInfo.forEach {
+            if (architectureInfoDao.getArchitecture(it.id) == null) {
+                architectureInfoDao.insertArchitectureInfo(it)
+            }
+        }
     }
 }
 
