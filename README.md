@@ -1,4 +1,4 @@
-<h1 align="center">UzbArchitectureAR</h1>
+<h1 align="center">Android application for virtual sightseeing</h1>
 <p align="center">  
 🇺🇿 UzbArchitectureAR presents modern Android development with Coroutines, Dagger Hilt, Flow, Room, ViewModel based on MVVM architecture 👀
 </p>
