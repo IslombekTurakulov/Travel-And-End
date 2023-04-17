@@ -1,8 +1,8 @@
 <resources>
     <!-- Base application theme. -->
 
-    <style name="Theme.UzbArchitectureAR.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/md_orange_100</item>
+    <style name="Theme.TravelTheEnd.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#F1FBFF</item>
         <item name="colorPrimaryVariant">@color/md_yellow_100</item>
         <item name="colorOnPrimary">@color/md_yellow_200</item>
         <item name="colorOnBackground">@color/white_87</item>
@@ -11,8 +11,8 @@
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
     </style>
 
-    <style name="Theme.UzbArchitectureAR.ActionBar" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <item name="colorPrimary">@color/md_orange_100</item>
+    <style name="Theme.TravelTheEnd.ActionBar" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">#F1FBFF</item>
         <item name="colorPrimaryVariant">@color/md_yellow_100</item>
         <item name="colorOnPrimary">@color/md_yellow_200</item>
         <item name="colorOnBackground">@color/white_87</item>
@@ -28,5 +28,9 @@
         <item name="android:padding">10dp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TravelTheEnd.App.CircleImageView" parent="">
+        <item name="cornerSize">18%</item>
     </style>
 </resources>

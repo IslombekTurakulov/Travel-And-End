@@ -13,7 +13,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/background">
+        android:background="@color/white_70">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -42,7 +42,7 @@
                 android:text="@{component.name}"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-                android:textColor="@color/white"
+                android:textColor="@color/gray_blue"
                 android:textSize="@dimen/_24ssp"
                 android:textStyle="bold"
                 android:translationZ="100dp"
@@ -60,7 +60,7 @@
                 android:src="@drawable/wiki"
                 app:layout_constraintEnd_toStartOf="@id/ar_btn"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/architecture_name" />
+                app:layout_constraintTop_toBottomOf="@+id/description_text" />
 
             <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/ar_btn"
@@ -71,14 +71,14 @@
                 android:src="@drawable/ic_baseline_center_focus_strong_24"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/wiki_btn"
-                app:layout_constraintTop_toTopOf="@id/wiki_btn" />
+                app:layout_constraintTop_toBottomOf="@+id/description_text" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/wiki_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/see_in_wikipedia"
-                android:textColor="@color/white_56"
+                android:textColor="@color/gray_blue"
                 app:layout_constraintEnd_toStartOf="@id/ar_btn"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/wiki_btn" />
@@ -88,7 +88,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/see_in_full_ar"
-                android:textColor="@color/white_56"
+                android:textColor="@color/gray_blue"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/wiki_btn"
                 app:layout_constraintTop_toBottomOf="@id/ar_btn" />
@@ -98,13 +98,12 @@
                 style="@style/TextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
                 android:text="@string/history"
-                android:textColor="@color/white_93"
+                android:textColor="@color/gray_blue"
                 android:textSize="21sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/wiki_title" />
+                app:layout_constraintTop_toBottomOf="@+id/architecture_name" />
 
             <TextView
                 android:id="@+id/description_text"
@@ -113,11 +112,18 @@
                 android:layout_marginTop="4dp"
                 android:padding="@dimen/_10sdp"
                 android:text="@{component.description}"
-                android:textColor="@color/white_70"
+                android:textColor="@color/gray_blue"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/history_title" />
+
+<!--            <androidx.fragment.app.FragmentContainerView-->
+<!--                android:id="@+id/google_map"-->
+<!--                android:name="com.google.android.gms.maps.SupportMapFragment"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                tools:context=".ui.MapFragment" />-->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

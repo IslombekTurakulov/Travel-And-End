@@ -1,7 +1,7 @@
 package com.iuturakulov.uzbarchitecture_ar.di
 
 import com.iuturakulov.uzbarchitecture_ar.extensions.Constants
-import com.iuturakulov.uzbarchitecture_ar.network.ArchitectureClient
+import com.iuturakulov.uzbarchitecture_ar.network.ArchitectureServiceImpl
 import com.iuturakulov.uzbarchitecture_ar.network.ArchitectureService
 import com.iuturakulov.uzbarchitecture_ar.network.HttpRequestInterceptor
 import com.skydoves.sandwich.adapters.ApiResponseCallAdapterFactory
@@ -45,7 +45,7 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideArchitectureClient(architectureService: ArchitectureService): ArchitectureClient {
-        return ArchitectureClient(architectureService)
+    fun provideArchitectureClient(architectureService: ArchitectureService): ArchitectureServiceImpl {
+        return ArchitectureServiceImpl(architectureService)
     }
 }

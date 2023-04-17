@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Путешествие и точка</string>
+    <string name="empty_architecture_placeholder">Ничего не нашлось :(</string>
+    <string name="see_in_wikipedia">Посмотреть в Википедии</string>
+    <string name="see_in_full_ar">Посмотреть в режимке дополненной реальности</string>
+    <string name="image_information">Информация о картинке</string>
+    <string name="history">Описание</string>
+    <string name="webview_error">Не удалось получить страницу: %1$s</string>
+</resources>

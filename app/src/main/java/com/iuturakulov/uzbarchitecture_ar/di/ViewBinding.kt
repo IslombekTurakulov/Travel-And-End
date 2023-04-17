@@ -8,6 +8,7 @@ import com.bumptech.glide.Glide
 import com.github.florent37.glidepalette.BitmapPalette
 import com.github.florent37.glidepalette.GlidePalette
 import com.google.android.material.card.MaterialCardView
+import com.google.android.material.imageview.ShapeableImageView
 import com.skydoves.whatif.whatIfNotNullOrEmpty
 
 object ViewBinding {
@@ -34,6 +35,14 @@ object ViewBinding {
                         }
                     }.crossfade(true)
             ).into(view)
+    }
+
+    @JvmStatic
+    @BindingAdapter("paletteShapeImage")
+    fun bindLoadImagePalette(view: ShapeableImageView, url: String) {
+        Glide.with(view.context)
+            .load(url)
+            .into(view)
     }
 
     @JvmStatic

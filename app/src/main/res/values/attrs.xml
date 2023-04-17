@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomViewPager">
+        <attr name="viewPagerHeight" format="dimension" />
+        <attr name="viewPagerWidth" format="dimension" />
+        <attr name="tabHeight" format="dimension" />
+    </declare-styleable>
+
+
+</resources>

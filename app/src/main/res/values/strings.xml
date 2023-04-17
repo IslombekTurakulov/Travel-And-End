@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">UzbArchitecture-AR</string>
-    <string name="empty_architecture_placeholder">Empty Architecture models</string>
+    <string name="app_name">Travel and the end</string>
+    <string name="empty_architecture_placeholder">Architectures are not found :(</string>
     <string name="see_in_wikipedia">See in Wikipedia</string>
     <string name="see_in_full_ar">See in full AR</string>
     <string name="image_information">Image information</string>
-    <string name="history">History</string>
+    <string name="history">Description</string>
+    <string name="webview_error">Error loading page: %1$s</string>
 </resources>

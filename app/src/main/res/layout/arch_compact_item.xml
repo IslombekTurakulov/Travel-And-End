@@ -1,0 +1,56 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="architecture"
+            type="com.iuturakulov.uzbarchitecture_ar.model.ArchitectureInfo" />
+    </data>
+
+    <com.skydoves.transformationlayout.TransformationLayout
+        android:id="@+id/transformationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:transformation_duration="550">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/item_image"
+                android:layout_width="@dimen/_64sdp"
+                android:layout_height="@dimen/_64sdp"
+                android:scaleType="centerInside"
+                android:src="@drawable/not_found"
+                app:paletteShapeImage="@{architecture.imageUrl}"
+                app:shapeAppearanceOverlay="@style/TravelTheEnd.App.CircleImageView" />
+
+            <TextView
+                android:id="@+id/item_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/_16sdp"
+                android:layout_weight="1"
+                android:letterSpacing="-0.01"
+                android:textSize="@dimen/_16ssp"
+                android:text="@{architecture.name}"
+                tools:text="Sample Text" />
+
+            <ImageView
+                android:id="@+id/item_arrow_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/baseline_arrow_forward_ios_24" />
+
+        </LinearLayout>
+
+    </com.skydoves.transformationlayout.TransformationLayout>
+
+</layout>
