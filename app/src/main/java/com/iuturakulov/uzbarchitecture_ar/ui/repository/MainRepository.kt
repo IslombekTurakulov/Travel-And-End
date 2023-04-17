@@ -2,7 +2,7 @@ package com.iuturakulov.uzbarchitecture_ar.ui.repository
 
 import androidx.annotation.WorkerThread
 import com.iuturakulov.uzbarchitecture_ar.model.ArchitectureInfo
-import com.iuturakulov.uzbarchitecture_ar.network.ArchitectureClient
+import com.iuturakulov.uzbarchitecture_ar.network.ArchitectureServiceImpl
 import com.iuturakulov.uzbarchitecture_ar.storage.ArchitectureInfoDao
 import com.skydoves.sandwich.ApiResponse
 import kotlinx.coroutines.Dispatchers
@@ -13,7 +13,7 @@ import kotlinx.coroutines.flow.onStart
 import javax.inject.Inject
 
 class MainRepository @Inject constructor(
-    private val architectureClient: ArchitectureClient,
+    private val architectureServiceImpl: ArchitectureServiceImpl,
     private val architectureInfoDao: ArchitectureInfoDao
 ) {
 
@@ -31,7 +31,7 @@ class MainRepository @Inject constructor(
     @WorkerThread
     suspend fun updateArchitectureInfo(
     ): ApiResponse<List<ArchitectureInfo>> {
-        return architectureClient.fetchArchitectureInfo()
+        return architectureServiceImpl.fetchArchitectureInfo()
     }
 
     suspend fun insertArchitectureInfo(architectureInfo: List<ArchitectureInfo>) {

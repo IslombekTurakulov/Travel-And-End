@@ -3,16 +3,16 @@
     android:id="@+id/toolbar"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/md_orange_100">
+    android:background="#F1FBFF">
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/toolbar_title"
         style="@style/TextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:maxEms="15"
         android:text="@string/app_name"
-        android:textColor="@color/black_70"
+        android:textColor="@color/gray_blue"
         android:textSize="@dimen/_16ssp" />
 
 </androidx.appcompat.widget.Toolbar>

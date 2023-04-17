@@ -5,21 +5,20 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.iuturakulov.uzbarchitecture_ar.R
-import com.iuturakulov.uzbarchitecture_ar.databinding.ItemArchitectureBinding
+import com.iuturakulov.uzbarchitecture_ar.databinding.ArchCompactItemBinding
 import com.iuturakulov.uzbarchitecture_ar.model.ArchitectureInfo
 import com.iuturakulov.uzbarchitecture_ar.ui.activities.DetailActivity
 
-class ArchitectureAdapter
-    : RecyclerView.Adapter<ArchitectureAdapter.ArchViewHolder>() {
+class ArchitectureCompactAdapter : RecyclerView.Adapter<ArchitectureCompactAdapter.ArchViewHolder>() {
 
     private val items: MutableList<ArchitectureInfo> = mutableListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArchViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val binding =
-            DataBindingUtil.inflate<ItemArchitectureBinding>(
+            DataBindingUtil.inflate<ArchCompactItemBinding>(
                 inflater,
-                R.layout.item_architecture,
+                R.layout.arch_compact_item,
                 parent,
                 false
             )
@@ -47,7 +46,7 @@ class ArchitectureAdapter
 
     override fun getItemCount() = items.size
 
-    class ArchViewHolder(val binding: ItemArchitectureBinding) :
+    class ArchViewHolder(val binding: ArchCompactItemBinding) :
         RecyclerView.ViewHolder(binding.root)
 }
 

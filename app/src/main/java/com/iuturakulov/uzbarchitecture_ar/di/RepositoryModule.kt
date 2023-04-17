@@ -16,7 +16,7 @@
 
 package com.iuturakulov.uzbarchitecture_ar.di
 
-import com.iuturakulov.uzbarchitecture_ar.network.ArchitectureClient
+import com.iuturakulov.uzbarchitecture_ar.network.ArchitectureServiceImpl
 import com.iuturakulov.uzbarchitecture_ar.storage.ArchitectureInfoDao
 import com.iuturakulov.uzbarchitecture_ar.ui.repository.MainRepository
 import dagger.Module
@@ -32,7 +32,7 @@ object RepositoryModule {
     @Provides
     @ViewModelScoped
     fun provideDetailRepository(
-        archClient: ArchitectureClient,
+        archClient: ArchitectureServiceImpl,
         archInfoDao: ArchitectureInfoDao
     ): MainRepository {
         return MainRepository(archClient, archInfoDao)

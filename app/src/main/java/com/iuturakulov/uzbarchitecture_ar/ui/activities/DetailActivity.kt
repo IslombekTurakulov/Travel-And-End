@@ -26,28 +26,32 @@ class DetailActivity : BindingActivity<ActivityDetailBinding>(R.layout.activity_
     @Inject
     lateinit var connectivityObserver: NetworkConnectivityObserver
 
-    private val arch: ArchitectureInfo by bundleNonNull(ARCH_EXTRA)
+    private val architectureInfo: ArchitectureInfo by bundleNonNull(ARCH_EXTRA)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         onTransformationStartContainer()
         super.onCreate(savedInstanceState)
         binding {
             lifecycleOwner = this@DetailActivity
-            component = this@DetailActivity.arch
+            component = this@DetailActivity.architectureInfo
             wikiBtn.setOnClickListener {
-                WebViewActivity.startActivity(root, arch.wikipediaUrl)
+                WebViewActivity.startActivity(
+                    view = root,
+                    url = architectureInfo.wikipediaUrl,
+                    title = architectureInfo.name
+                )
             }
             arBtn.setOnClickListener {
-                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(arch.arUrl)))
+                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(architectureInfo.arUrl)))
             }
         }
-        connectivityObserver.observe().onEach {
-            when (it.name) {
-                "Available" -> {
+        connectivityObserver.observe().onEach { status ->
+            when (status.name) {
+                "AVAILABLE" -> {
                     Toast.makeText(this, "Connection Available", Toast.LENGTH_SHORT).show()
                     setActivationBtn(true)
                 }
-                "Unavailable" -> {
+                "UNAVAILABLE" -> {
                     Toast.makeText(this, "Connection Unavailable", Toast.LENGTH_SHORT).show()
                     setActivationBtn(false)
                 }
